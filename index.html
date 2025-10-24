@@ -19,17 +19,17 @@
     </head>
     <body id="page-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Nirbhay Beri</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." />
-                <div class="small text-white-50 text-center mb-3">
-        <i class="fas fa-graduation-cap"></i> M.Tech Smart Manufacturing
-        <br />
-        <i ></i> IISc, Bangalore
-        <br />
-        <span class="text-white-50">NIRF #1 University in India</span>
-    </div></span>
-            </a>
+<a class="navbar-brand js-scroll-trigger" href="#page-top">
+     <span class="d-block text-center"> <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." />
+          <div class="small text-white-50 text-center mb-3 d-none d-lg-block">
+               <i class="fas fa-graduation-cap"></i> M.Tech Smart Manufacturing
+               <br />
+               <i ></i> IISc, Bangalore
+               <br />
+               <span class="text-white-50">Nirf #1 University In India</span>
+           </div>
+     </span>
+ </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
@@ -228,7 +228,7 @@
             <div>
                 <h3 class="mb-0">Central Board of Secondary Education</h3>
                 <div class="subheading mb-3">High School</div>
-                <p>Cgpa: 10</p>
+                <p>CGPA: 10</p>
             </div>
         </div>
         <div class="flex-shrink-0"><span class="text-primary">April 2015 - May 2016</span></div>
@@ -438,7 +438,7 @@
   <div class="resume-section-content">
     <h2 class="mb-5">Research Publications</h2>
     <p class="mb-10">
-      My research focuses on <b>Industrial Automation, Artificial Intelligence (Ai), Digital Twin, Extended Reality (XR), and the Industrial Metaverse</b>. 
+      My research focuses on <b>Industrial Automation, Artificial Intelligence (AI), Digital Twin, Extended Reality (XR), and the Industrial Metaverse</b>. 
       Below are my publications with supplementary videos and images.
     </p>
 
@@ -814,6 +814,121 @@
                 <span class="badge bg-secondary me-1 mb-1">Data Logging</span>
                 <span class="badge bg-secondary me-1 mb-1">Poka-Yoke</span>
                 <span class="badge bg-secondary me-1 mb-1">POC Development</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="project-card mb-5 pb-5 border-bottom">
+    <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-1">
+            <h3 class="mb-3 text-primary">AI & Vision-Based Robot for Surface Defect Detection</h3>
+            <p><strong>Goal:</strong> To automate the detection of surface defects (cracks, pitting, fretting) on 3D-printed aircraft components using a robotic arm and computer vision, improving inspection consistency over manual methods.</p>
+            <p class="mb-3">
+                Developed a system utilizing a <b>DOBOT Magician</b> robot arm equipped with a camera to systematically scan the surface of a 3D-printed aircraft model (scaled A340 wing). Implemented robot <b>path planning</b> (Lawnmower pattern) and performed <b>camera calibration</b> for accurate imaging. Trained and deployed a <b>YOLOv8 computer vision model</b> on a custom, augmented dataset (using <b>Roboflow</b>) to detect and classify four types of surface defects. This project demonstrated the feasibility of automated NDE for quality control.
+            </p>
+            <p class="mb-2">
+                <strong>Key Technologies & Concepts:</strong>
+                <span class="badge bg-secondary me-1 mb-1">Computer Vision (YOLOv8)</span>
+                <span class="badge bg-secondary me-1 mb-1">Object Detection</span>
+                <span class="badge bg-secondary me-1 mb-1">Robotics (DOBOT Magician)</span>
+                <span class="badge bg-secondary me-1 mb-1">Path Planning</span>
+                <span class="badge bg-secondary me-1 mb-1">Camera Calibration</span>
+                <span class="badge bg-secondary me-1 mb-1">Data Augmentation (Roboflow)</span>
+                <span class="badge bg-secondary me-1 mb-1">Non-Destructive Evaluation (NDE)</span>
+                <span class="badge bg-secondary me-1 mb-1">3D Printing</span>
+                <span class="badge bg-secondary me-1 mb-1">Python (OpenCV)</span>
+            </p>
+        </div>
+        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+             <img src="./assets/img/Project6.png" class="img-fluid rounded shadow" alt="AI Defect Detection Robot Project">
+             </div>
+    </div>
+</div>
+
+<div class="project-card mb-5 pb-5 border-bottom">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+             <img src="https://placehold.co/600x400/0dcaf0/ffffff?text=Ignition+Troubleshooting+Dashboard" class="img-fluid rounded shadow" alt="Ignition SCADA Troubleshooting Dashboard">
+             </div>
+        <div class="col-lg-6">
+            <h3 class="mb-3 text-primary">Ignition SCADA Troubleshooting Dashboard</h3>
+            <p><strong>Goal:</strong> To provide real-time monitoring and faster troubleshooting for event triggers within the MES-PLC communication system.</p>
+            <p class="mb-3">
+                Developed a diagnostic dashboard in <b>Ignition SCADA</b> to monitor event triggers (WorkStart/Stop, Andon, Conveyor) between MES and PLCs. Visualizes relevant <b>PLC tag</b> statuses and displays a log of recent events for operators. Includes <b>event filtering</b> tools for engineers to analyze historical data and diagnose communication issues quickly.
+            </p>
+            <p class="mb-2">
+                <strong>Key Technologies & Concepts:</strong>
+                <span class="badge bg-secondary me-1 mb-1">Ignition SCADA</span>
+                <span class="badge bg-secondary me-1 mb-1">HMI Design</span>
+                <span class="badge bg-secondary me-1 mb-1">PLC Tag Integration</span>
+                <span class="badge bg-secondary me-1 mb-1">OPC UA</span>
+                <span class="badge bg-secondary me-1 mb-1">Real-Time Monitoring</span>
+                <span class="badge bg-secondary me-1 mb-1">Event Logging</span>
+                <span class="badge bg-secondary me-1 mb-1">Troubleshooting Tools</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="project-card mb-5 pb-5 border-bottom">
+    <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-1">
+            <h3 class="mb-3 text-primary">AI Vision Inspection System for Reworked Vacuum Pumps (In Progress)</h3>
+            <p><strong>Goal:</strong> To automate the quality inspection of washed, reworked vacuum pumps using an AI-powered vision system, ensuring cleanliness standards are met before reassembly.</p>
+            <p class="mb-3">
+                Currently developing an AI-based vision system as part of a larger client project for inspecting reworked vacuum pumps. Configured and deployed the system on an <b>NVIDIA Jetson Xavier</b> platform, including OS setup and necessary configurations. The present focus involves collecting data and <b>training a classification model</b> to accurately identify residual contaminants or cleaning defects. The system architecture is designed to eventually send the inspection result (e.g., pass/fail label) to a <b>PLC</b> via <b>Profinet</b>.
+            </p>
+             <p class="mb-3">
+                <i>Future scope involves integrating this inspection result with a <b>Fanuc robot</b> for automated sorting of pumps onto an Autonomous Mobile Robot (AMR).</i>
+             </p>
+            <p class="mb-2">
+                <strong>Key Technologies & Concepts:</strong>
+                <span class="badge bg-secondary me-1 mb-1">Computer Vision</span>
+                <span class="badge bg-secondary me-1 mb-1">AI/ML (Classification)</span>
+                <span class="badge bg-secondary me-1 mb-1">NVIDIA Jetson Xavier</span>
+                <span class="badge bg-secondary me-1 mb-1">PLC Integration</span>
+                <span class="badge bg-secondary me-1 mb-1">Profinet Communication</span>
+                <span class="badge bg-secondary me-1 mb-1">Industrial Automation</span>
+                <span class="badge bg-secondary me-1 mb-1">Quality Inspection</span>
+                <span class="badge bg-light text-dark me-1 mb-1">Fanuc Robot (Planned)</span> <span class="badge bg-light text-dark me-1 mb-1">AMR (Planned)</span> </p>
+        </div>
+        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+             <img src="https://placehold.co/600x400/2a9d8f/ffffff?text=Pump+Vision+Inspection" class="img-fluid rounded shadow" alt="Rework Pump Vision Inspection System">
+             </div>
+    </div>
+</div>
+
+
+<div class="project-card mb-5 pb-5 border-bottom">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+             <img src="https://placehold.co/600x400/f56565/ffffff?text=Process+Simulation+VC" class="img-fluid rounded shadow" alt="Process Simulation with Visual Components">
+             </div>
+        <div class="col-lg-6">
+            <h3 class="mb-3 text-primary">Process Simulation & Digital Twin Enablement</h3>
+            <p><strong>Goal:</strong> To leverage simulation and digital twin technologies to optimize shop floor processes, support customer center planning, and enable smart manufacturing initiatives.</p>
+
+            <p class="mb-2">
+                <b>Process Simulation:</b> Developed detailed process simulations using <b>Visual Components</b> for ITBA Customer Centres and global assembly systems. Replicated real-world shop floor conditions with client data to provide insights, such as calculating optimal platform widths for AWM systems based on target process times. Enhanced simulations with custom <b>Python</b> scripts.
+            </p>
+            <p class="mb-3">
+                <b>Digital Twin POCs:</b> Established physical connectivity with <b>PLC systems</b> and delivered Digital Twin Proof of Concepts (POCs) utilizing <b>OPC UA</b> for seamless real-time data integration and visualization.
+            </p>
+            <p class="mb-3">Collaborated cross-functionally to align outputs with operational goals, successfully establishing these technologies as strategic enablers for Smart Manufacturing Solutions across group companies.</p>
+
+            <p class="mb-2">
+                <strong>Key Technologies & Concepts:</strong>
+                <span class="badge bg-secondary me-1 mb-1">Process Simulation</span>
+                <span class="badge bg-secondary me-1 mb-1">Visual Components</span>
+                <span class="badge bg-secondary me-1 mb-1">Digital Twin (POCs)</span>
+                <span class="badge bg-secondary me-1 mb-1">Python Scripting</span>
+                <span class="badge bg-secondary me-1 mb-1">PLC Integration</span>
+                <span class="badge bg-secondary me-1 mb-1">OPC UA</span>
+                <span class="badge bg-secondary me-1 mb-1">Workflow Optimization</span>
+                <span class="badge bg-secondary me-1 mb-1">Smart Manufacturing</span>
             </p>
         </div>
     </div>
