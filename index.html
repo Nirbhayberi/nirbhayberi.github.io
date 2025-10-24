@@ -595,7 +595,7 @@
                  <span class="badge bg-secondary me-1 mb-1">Web Sockets</span>
              </p>
         </div>
-         <div class="col-lg-6 order-lg-1"> <img src="assets/img/Project2.png" class="img-fluid rounded shadow" alt="Factory Layout Optimization in Metaverse Project Image">
+         <div class="col-lg-6 order-lg-2"> <img src="assets/img/Project2.png" class="img-fluid rounded shadow" alt="Factory Layout Optimization in Metaverse Project Image">
               </div>
     </div>
 </div>
@@ -651,7 +651,7 @@
                 <span class="badge bg-secondary me-1 mb-1">Socket Communication</span>
             </p>
         </div>
-        <div class="col-lg-6 order-lg-1"> <img src="./assets/img/Project4.png" class="img-fluid rounded shadow" alt="VR Maintenance Learning Project Image">
+        <div class="col-lg-6 order-lg-2"> <img src="./assets/img/Project4.png" class="img-fluid rounded shadow" alt="VR Maintenance Learning Project Image">
         </div>
     </div>
 </div>
@@ -680,9 +680,142 @@
                 <strong>Results:</strong> Achieved a <b>BLEU score of 0.7</b>+ (outperforming benchmarks) and a Language Quality Index of 71%, meeting internal requirements while significantly reducing costs and turnaround time.
              </p>
         </div>
-        <div class="col-lg-6 order-lg-1">
+        <div class="col-lg-6 order-lg-2">
              <img src="./assets/img/Project5.png" class="img-fluid rounded shadow" alt="LinguaLink Architecture Diagram">
              </div>
+    </div>
+</div>
+
+<div class="project-card mb-5 pb-5 border-bottom">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+             <img src="./assets/img/Picture6.png" class="img-fluid rounded shadow" alt="WISE Sensor to Azure IoT Hub Architecture">
+             </div>
+        <div class="col-lg-6">
+            <h3 class="mb-3 text-primary">Industrial Sensor Data Logging & Analysis (In Progress)</h3>
+            <p><strong>Goal:</strong> To establish a cloud-based pipeline for logging and analyzing data from industrial sensors, enabling real-time monitoring and operational insights.</p>
+            <p class="mb-3">
+                Currently developing a system to connect an <b>Advantech WISE-4250-S232</b> sensor directly to <b>Microsoft Azure IoT Hub</b>. The sensor is configured to act as an <b>MQTT client</b>, securely publishing its data (e.g., humidity, temperature) to the IoT Hub broker. The immediate focus is on establishing robust <b>data logging</b> mechanisms within Azure and performing initial data exploration and visualization using <b>Power BI</b>. Future steps involve setting up automated alerting and potentially leveraging services like Azure Stream Analytics and Time Series Insights for advanced analysis.
+            </p>
+            <p class="mb-2">
+                <strong>Key Technologies & Concepts:</strong>
+                <span class="badge bg-secondary me-1 mb-1">Microsoft Azure IoT Hub</span>
+                <span class="badge bg-secondary me-1 mb-1">MQTT Protocol</span>
+                <span class="badge bg-secondary me-1 mb-1">Advantech WISE Sensors</span>
+                <span class="badge bg-secondary me-1 mb-1">Industrial IoT (IIoT)</span>
+                <span class="badge bg-secondary me-1 mb-1">Data Logging</span>
+                <span class="badge bg-secondary me-1 mb-1">Data Visualization</span>
+                <span class="badge bg-secondary me-1 mb-1">Power BI</span>
+                </p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="project-card mb-5 pb-5 border-bottom">
+    <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0"> <h3 class="mb-3 text-primary">Shop Floor Operator Performance Analysis (In Progress)</h3>
+            <p><strong>Goal:</strong> To analyze shop floor operator data related to product assembly, aiming to identify operational trends, potential bottlenecks, and areas for efficiency improvement.</p>
+            <p class="mb-3">
+                Currently developing an <b>Azure data pipeline</b> to ingest operator performance data via APIs from shop floor systems, including <b>Azumuta</b> and potentially <b>BPCS (ERP)</b>. The initial phase involves processing and analyzing data from Azumuta (e.g., assembly output, quality metrics, time) using <b>Power BI</b> to create dashboards for visualizing key performance indicators and gaining preliminary operational insights.
+            </p>
+             <p class="mb-3">
+                <i>Future scope includes integrating AI/ML models for predictive analytics and exploring connections to a Digital Twin of the production environment.</i>
+             </p>
+            <p class="mb-2">
+                <strong>Key Technologies & Concepts:</strong>
+                <span class="badge bg-secondary me-1 mb-1">Microsoft Azure (Data Pipeline)</span>
+                <span class="badge bg-secondary me-1 mb-1">Power BI</span>
+                <span class="badge bg-secondary me-1 mb-1">Data Analysis</span>
+                <span class="badge bg-secondary me-1 mb-1">API Integration</span>
+                <span class="badge bg-secondary me-1 mb-1">Shop Floor Systems (Azumuta, BPCS)</span>
+                <span class="badge bg-secondary me-1 mb-1">Operational KPIs</span>
+                <span class="badge bg-light text-dark me-1 mb-1">AI/ML (Future)</span> <span class="badge bg-light text-dark me-1 mb-1">Digital Twin (Future)</span> </p>
+        </div>
+        <div class="col-lg-6 order-lg-2">
+             <img src="https://placehold.co/600x400/4299E1/ffffff?text=Shop+Floor+Data+Pipeline" class="img-fluid rounded shadow" alt="Shop Floor Data Analysis Pipeline">
+             </div>
+    </div>
+</div>
+
+
+<div class="project-card mb-5 pb-5 border-bottom">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+             <img src="https://placehold.co/600x400/6610f2/ffffff?text=MES+PLC+Communication" class="img-fluid rounded shadow" alt="MES-PLC Communication Architecture">
+             </div>
+        <div class="col-lg-6">
+            <h3 class="mb-3 text-primary">MES-PLC Communication Architecture for AC New MES</h3>
+            <p><strong>Goal:</strong> To design and implement a robust communication architecture enabling seamless data exchange between the .NET-based AC New MES and shop floor PLCs at the Pune PNE Plant.</p>
+            <p class="mb-3">
+                Architected and implemented a solution using <b>Kepware</b> as middleware to bridge the communication gap between the new .NET-based MES and Siemens PLCs. Configured secure data exchange via the <b>OPC UA protocol</b>. Utilized Kepware's <b>Advanced Tags</b> for real-time event triggering (WorkStart/Stop, Andon states) based on PLC data. This system is now <b>successfully implemented and live</b> at the Pune PNE Plant.
+            </p>
+            <p class="mb-2">
+                <strong>Key Technologies & Concepts:</strong>
+                <span class="badge bg-secondary me-1 mb-1">MES Integration (.NET)</span>
+                <span class="badge bg-secondary me-1 mb-1">PLC Communication (Siemens)</span>
+                <span class="badge bg-secondary me-1 mb-1">Kepware</span>
+                <span class="badge bg-secondary me-1 mb-1">OPC UA</span>
+                <span class="badge bg-secondary me-1 mb-1">Industrial Connectivity</span>
+                <span class="badge bg-secondary me-1 mb-1">Event Triggering (Advanced Tags)</span>
+                <span class="badge bg-secondary me-1 mb-1">Shop Floor Automation</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="project-card mb-5 pb-5 border-bottom">
+    <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0"> <h3 class="mb-3 text-primary">Automated O-Ring Detection System (POC)</h3>
+            <p><strong>Goal:</strong> To prevent assembly errors and reduce rework costs by developing an automated system to verify the presence of O-rings on components during manufacturing.</p>
+            <p class="mb-3">
+                Developed a Proof-of-Concept system addressing costly errors caused by missing O-rings. Integrated <b>Computer Vision</b> (fine-tuned <b>YOLO model</b>) with a <b>Siemens S7-315 PLC</b> via <b>Kepware (OPC UA)</b>. The system includes barcode scanning, indicator lamps, event/result logging (pass/fail, operator), and a <b>Flask</b> backend with an HTML/CSS frontend. POC successfully demonstrated feasibility; full implementation under discussion with plant stakeholders.
+            </p>
+            <p class="mb-2">
+                <strong>Key Technologies & Concepts:</strong>
+                <span class="badge bg-secondary me-1 mb-1">Computer Vision (YOLO)</span>
+                <span class="badge bg-secondary me-1 mb-1">PLC Programming (Siemens S7)</span>
+                <span class="badge bg-secondary me-1 mb-1">SIMATIC Manager</span>
+                <span class="badge bg-secondary me-1 mb-1">Kepware / OPC UA</span>
+                <span class="badge bg-secondary me-1 mb-1">Flask (Python)</span>
+                <span class="badge bg-secondary me-1 mb-1">HTML/CSS</span>
+                <span class="badge bg-secondary me-1 mb-1">System Integration</span>
+                <span class="badge bg-secondary me-1 mb-1">Data Logging</span>
+                <span class="badge bg-secondary me-1 mb-1">POC Development</span>
+            </p>
+        </div>
+        <div class="col-lg-6 order-lg-2">
+             <img src="https://placehold.co/600x400/ffc107/000000?text=O-Ring+Detection+POC" class="img-fluid rounded shadow" alt="O-Ring Detection System POC">
+             </div>
+    </div>
+</div>
+
+
+<div class="project-card mb-5 pb-5 border-bottom">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+             <img src="https://placehold.co/600x400/20c997/ffffff?text=Kit+Checker+Vision+System" class="img-fluid rounded shadow" alt="Kit Fill Checker System POC">
+             </div>
+        <div class="col-lg-6">
+            <h3 class="mb-3 text-primary">Automated Kit Fill Checker System (POC)</h3>
+            <p><strong>Goal:</strong> To ensure accuracy in spare parts kitting for Atlas Copco Edwards, preventing errors, reducing rework, and improving traceability using computer vision.</p>
+            <p class="mb-3">
+                Developed a Proof-of-Concept (POC) system to verify correct part numbers and quantities in spare parts kits. Utilized a fine-tuned <b>YOLO model</b> for <b>computer vision</b> detection of components within the camera's view. Integrated <b>barcode scanning</b> for initial identification. The system logs all relevant data (part numbers, scan info, pass/fail, operator details). Implemented a Poka-Yoke feature by generating a unique <b>barcode for correctly filled kits</b>. Also included a manual override option for urgent fills, ensuring operator accountability through logging.
+            </p>
+            <p class="mb-2">
+                <strong>Key Technologies & Concepts:</strong>
+                <span class="badge bg-secondary me-1 mb-1">Computer Vision (YOLO)</span>
+                <span class="badge bg-secondary me-1 mb-1">Object Detection</span>
+                <span class="badge bg-secondary me-1 mb-1">Python (likely Flask/OpenCV)</span>
+                <span class="badge bg-secondary me-1 mb-1">Barcode Scanning</span>
+                <span class="badge bg-secondary me-1 mb-1">Barcode Generation</span>
+                <span class="badge bg-secondary me-1 mb-1">Data Logging</span>
+                <span class="badge bg-secondary me-1 mb-1">Poka-Yoke</span>
+                <span class="badge bg-secondary me-1 mb-1">POC Development</span>
+            </p>
+        </div>
     </div>
 </div>
         <div class="project-card mb-5 pb-5 border-bottom">
@@ -690,7 +823,7 @@
                 <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABjAAAAJgCAMAAACd6D2bAAAAA1BMVEUAAADa23u0AAAAX0lEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfNkBqgABH2W8fXoAAAAASUVORK5CYII=" class="img-fluid rounded shadow" alt="Robotic Arm Project Image">
                 </div>
-                <div class="col-lg-6 order-lg-1">
+                <div class="col-lg-6 order-lg-2">
                     <h3 class="mb-3 text-primary">Intelligent Robotic Arm for Quality Control</h3>
                     <p class="lead mb-4">Developed a fully autonomous system that uses computer vision to sort objects with high precision. This project showcases my skills in robotics, AI, and sensor integration, creating a reliable and efficient solution for automated quality control in a manufacturing setting.</p>
                     <p class="mb-2">
