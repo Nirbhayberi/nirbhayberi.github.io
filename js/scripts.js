@@ -68,37 +68,21 @@ window.addEventListener('DOMContentLoaded', () => {
             scrub: 1.5 
         }
     });
+// --- Auto Rotating Profile Image ---
+const profileFlipInner = document.querySelector('.flip-profile-inner');
 
-    // --- Profile Image Flip on Hover ---
-    const profileFlipContainer = document.querySelector('.flip-profile-container');
-    const profileFlipInner = document.querySelector('.flip-profile-inner');
+if (profileFlipInner) {
+    gsap.set(profileFlipInner, { opacity: 0, scale: 0.8 });
+    gsap.to(profileFlipInner, { 
+        opacity: 1, 
+        scale: 1, 
+        duration: 1.2, 
+        ease: "power3.out", 
+        delay: 0.5 
+    });
+    // Rotation handled purely by CSS
+}
 
-    if (profileFlipContainer && profileFlipInner) {
-        let flipTimeout; 
-        let revertTimeout;
-        let isFlipping = false; 
-
-        profileFlipContainer.addEventListener('mouseenter', () => {
-            if (!isFlipping) { 
-                isFlipping = true;
-                profileFlipInner.classList.add('is-flipped'); 
-
-                flipTimeout = setTimeout(() => {
-                    profileFlipInner.classList.remove('is-flipped'); 
-                    revertTimeout = setTimeout(() => {
-                        isFlipping = false; 
-                    }, 600); // matches CSS transition
-                }, 2000); // 2-second delay
-            }
-        });
-        
-        profileFlipContainer.addEventListener('mouseleave', () => {
-             clearTimeout(flipTimeout);
-             clearTimeout(revertTimeout);
-             profileFlipInner.classList.remove('is-flipped');
-             isFlipping = false;
-        });
-    }
 
     // --- Animate all other sections on scroll ---
     
