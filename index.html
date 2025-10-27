@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="Nirbhay Beri Portfolio" />
+        <meta name="author" content="Nirbhay Beri" />
         <title>Nirbhay Beri</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -15,1243 +15,877 @@
             h1, h2, h3, .subheading {
                 text-transform: capitalize !important;
             }
+            .subheading a {
+                 text-transform: none !important;
+            }
+             /* CSS to center images in social icons */
+             .social-icon img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 80%;
+                max-height: 80%;
+                width: auto;
+                height: auto;
+            }
+            /* Ensure skill logos aren't overridden */
+            .skill-card .skill-logo {
+                position: static;
+                transform: none;
+                max-width: none;
+                max-height: none;
+                 height: 2.25rem;
+                 width: auto;
+                 vertical-align: middle;
+                 margin-bottom: 0.5rem;
+            }
         </style>
     </head>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-<a class="navbar-brand js-scroll-trigger" href="#page-top">
-
-    <span class="d-flex align-items-center d-lg-none">
-        <img class="img-profile rounded-circle me-2"
-             src="assets/img/profile.jpg"
-             alt="Profile Picture"
-             style="width: 40px; height: 40px; border: 2px solid rgba(255,255,255,0.3);" />
-        <span>Nirbhay Beri</span>
-    </span>
-    <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." />
-        <div class="small text-white-50 text-center mb-3">
-             <i class="fas fa-graduation-cap"></i> M.Tech Smart Manufacturing
-             <br />
-             <i></i> IISc, Bangalore
-             <br />
-             <span class="text-white-50">NIRF #1 University In India</span>
-        </div>
-    </span>
-    </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills & Coursework</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#researchpapers">Research Papers</a></li>
-                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Projects">Projects</a></li>
-
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li> -->
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards & Achievements</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Highlights">Highlights</a></li>
-</li>
-    <div class="mt-4">
-    <a class="btn btn-primary btn-lg" href="assets/resume.pdf" target="_blank" download>
-        Download My Resume
-    </a>
-</div>
-
-
-                </ul>
+    <body id="page-top"> 
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="topNav">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand js-scroll-trigger d-flex align-items-center" href="#page-top">
+                    <img class="img-profile rounded-circle me-2"
+                         src="assets/img/profile.jpg"
+                         alt="Profile Picture"
+                         style="width: 30px; height: 30px;" />
+                    <span>Nirbhay Beri</span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                       <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutMeModal">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#researchpapers">Research</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Highlights">Highlights</a></li>
+                        <li class="nav-item ms-lg-3">
+                            <a class="btn btn-outline-light btn-sm" href="assets/resume.pdf" target="_blank" download>
+                                 <i class="fas fa-download me-1"></i> Resume
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
+        
         <div class="container-fluid p-0">
-            <section class="resume-section" id="about">
-  <div class="resume-section-content">
-    <h1 class="mb-0">
-      Nirbhay
-      <span class="text-primary">Beri</span>
-    </h1>
-<div class="subheading mb-5">
-  Pune, Maharashtra · (+91) 7839936690 ·
-  <a href="mailto:nirbhayberi99@gmail.com" style="text-transform: none !important;">nirbhayberi99@gmail.com</a>
-</div>    
-<h3 class="mb-3" style="text-transform: none !important;">Innovating at the Core of Industry 4.0</h3>
-<p class="lead mb-4">
-    As an <b>Automation & Digitalization Engineer</b>, I focus on integrating modern technology to enhance manufacturing efficiency. My work involves understanding user requirements, contributing to the design of solution architectures, and participating in related R&D activities. I apply principles in key areas including:
-</p>
-
-<div class="mb-4">
-    <ul class="fa-ul mb-0">
-        <li>
-            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
-            <b>IT/OT Convergence:</b> Focusing on integrating Information Technology (IT) with Operational Technology (OT) systems to enable seamless data flow and unified system visibility.
-        </li>
-        <li>
-            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
-            <b>AI & Data Analysis:</b> Applying Artificial Intelligence concepts and data analysis methods to extract insights, support process optimization, and inform decision-making.
-        </li>
-        <li>
-            <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
-            <b>Digital Twin, Simulation & AR/VR:</b> Applying virtual models (Digital Twins) for simulation and analysis, and utilizing Augmented/Virtual Reality (AR/VR) for enhanced visualization and interaction.
-        </li>
-    </ul>
-</div>
-
-<p>Enthusiastic about contributing to smart manufacturing by developing practical, automated solutions for industrial challenges.</p>
-
-<div class="social-icons d-flex flex-wrap justify-content-start align-items-start">
-
-    <div class="text-center me-3 mb-3">
-        <a class="social-icon d-block mx-auto"
-           href="https://www.linkedin.com/in/nirbhay-beri"
-           target="_blank"
-           aria-label="LinkedIn Profile"
-           style="position: relative !important;"> <i class="fab fa-linkedin-in"
-               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i> </a>
-        <span class="d-block small text-muted mt-1">LinkedIn</span>
+            
+<section class="hero-section" id="about">
+    <div class="hero-content container-fluid">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7">
+                <h1 class="mb-3 hero-title">
+                    Nirbhay
+                    <span class="text-primary">Beri</span>
+                </h1>
+                <h3 class="mb-4 hero-subtitle" style="text-transform: none !important;">
+                    Innovating at the Core of Industry 4.0
+                </h3>
+                <p class="lead hero-description mb-5">
+                    Automation & Digitalization Engineer focused on R&D, IT/OT Convergence, AI, and the Industrial Metaverse.
+                </p>
+                
+                <div>
+                    <a href="projects.html" class="btn btn-primary btn-lg js-scroll-trigger hero-button me-3">View My Work <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="#" class="btn btn-outline-light btn-lg hero-button" data-bs-toggle="modal" data-bs-target="#aboutMeModal">
+                        About Me <i class="fas fa-user ms-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+<div class="col-lg-5 text-center">
+                <div class="flip-profile-container mx-auto mb-2">
+                    <div class="flip-profile-inner">
+                        <div class="flip-profile-front">
+                            <img class="img-fluid profile-img" src="assets/img/profile.jpg" alt="Nirbhay Beri Profile Image">
+                        </div>
+                    <div class="flip-profile-back">
+                        <img class="img-fluid profile-img" src="assets/img/profile_emoji.jpg" alt="Nirbhay Beri Alternate Image">
+                    </div>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block small text-white-50 text-center mt-3 hero-usp-text">
+                     <i class="fas fa-graduation-cap"></i> M.Tech Smart Manufacturing
+                     <br />
+                     IISc, Bangalore
+                     <br />
+                     <span class="text-white-50">NIRF #1 University in India</span>
+                </div>
+            </div>
+            
+        </div>
     </div>
-
-    <div class="text-center me-3 mb-3">
-        <a class="social-icon d-block mx-auto"
-           href="https://scholar.google.com/citations?user=H8w5wKQAAAAJ&hl=en"
-           target="_blank"
-           aria-label="Google Scholar Profile"
-           style="position: relative !important;"> <i class="fas fa-graduation-cap"
-               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i> </a>
-        <span class="d-block small text-muted mt-1">Google Scholar</span>
-    </div>
-
-    <div class="text-center mb-3">
-        <a class="social-icon d-block mx-auto"
-           href="https://dm.iisc.ac.in/dm/member/nirbhay-beri/"
-           target="_blank"
-           aria-label="IISc Profile"
-           style="position: relative !important;"> <img src="assets/img/IISc-Final.png"
-                 alt="IISc Logo"
-                 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 80%; max-height: 80%; width: auto; height: auto;"> </a>
-        <span class="d-block small text-muted mt-1">IISc Profile</span>
-    </div>
-
-</div>
 </section>
+            <!-- <section class="resume-section" id="details">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">About Me</h2>
+                    <p class="lead mb-4">
+                        As an <b>Automation & Digitalization Engineer</b>, I focus on integrating modern technology to enhance manufacturing efficiency. My work involves understanding user requirements, contributing to the design of solution architectures, and participating in related R&D activities. I apply principles in key areas including:
+                    </p>
+                    <div class="mb-4">
+                        <ul class="fa-ul mb-0">
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                                <b>IT/OT Convergence:</b> Focusing on integrating Information Technology (IT) with Operational Technology (OT) systems.
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                                <b>AI & Data Analysis:</b> Applying AI concepts and data analysis methods to extract insights and support process optimization.
+                            </li>
+                            <li>
+                                <span class="fa-li"><i class="fas fa-check text-primary"></i></span>
+                                <b>Digital Twin, Simulation & AR/VR:</b> Applying virtual models and AR/VR for enhanced visualization and interaction.
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Enthusiastic about contributing to smart manufacturing by developing practical, automated solutions for industrial challenges.</p>
+                    
+                    <div class="social-icons d-flex flex-wrap justify-content-start align-items-start mt-5">
+                        <div class="text-center me-3 mb-3">
+                            <a class="social-icon d-block mx-auto" href="https://www.linkedin.com/in/nirbhay-beri" target="_blank" aria-label="LinkedIn Profile" style="position: relative !important;">
+                                <i class="fab fa-linkedin-in" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+                            </a>
+                            <span class="d-block small text-muted mt-1">LinkedIn</span>
+                        </div>
+                        <div class="text-center me-3 mb-3">
+                            <a class="social-icon d-block mx-auto" href="https://scholar.google.com/citations?user=H8w5wKQAAAAJ&hl=en" target="_blank" aria-label="Google Scholar Profile" style="position: relative !important;">
+                                <i class="fas fa-graduation-cap" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+                            </a>
+                            <span class="d-block small text-muted mt-1">Google Scholar</span>
+                        </div>
+                        <div class="text-center mb-3">
+                            <a class="social-icon d-block mx-auto" href="https://dm.iisc.ac.in/dm/member/nirbhay-beri/" target="_blank" aria-label="IISc Profile" style="position: relative !important;">
+                                <img src="assets/img/IISc-Final.png" alt="IISc Logo" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 80%; max-height: 80%; width: auto; height: auto;">
+                            </a>
+                            <span class="d-block small text-muted mt-1">IISc Profile</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             -->
             <hr class="m-0" />
-            <section class="resume-section" id="experience">
+<section class="resume-section" id="experience">
     <div class="resume-section-content">
         <h2 class="mb-5">Experience</h2>
-<div class="d-flex flex-column flex-md-row justify-content-between mb-5 align-items-center">
-    <div class="flex-grow-1">
-        <h3 class="mb-0 d-flex align-items-center">
-            Engineer - Automation & Digitalisation
-            <img src="assets/img/atlascopco_logo.png" alt="Atlas Copco Logo" style="width:100px; height:auto; margin-left:10px;">
-        </h3>
-        <div class="subheading mb-3">Atlascopco Group (GECIA), Pune</div>
-        <ul class="fa-ul mb-0">
-            <li>
-                <span class="fa-li"><i class="fas fa-wrench text-primary"></i></span>
-                Contributing to the <b>development and setup of the GECIA Industry 4.0 Lab</b>, coordinating with team members and vendors.
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-cogs text-primary"></i></span>
-                Involved in integrating key technologies like <b>cobots</b>, <b>PLCs</b>, <b>vision systems</b>, <b>MES</b>, specialized tools (tightening, deburring), and various <b>industrial protocols</b>.
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-laptop-code text-primary"></i></span>
-                Working with software including <b>Ignition SCADA</b>, <b>Nodered</b>, <b>Kepware</b>, <b>Visual Components</b> (process simulation), <b>Power Platform</b>, and <b>Microsoft Azure</b> cloud services.
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-project-diagram text-primary"></i></span>
-                Contributing to projects such as <b>Vision System development</b>, an <b>Industrial Kitting System</b>, and <b>IoT sensor integration</b> (data logging to cloud).
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-brain text-primary"></i></span>
-                Participating in Proof-of-Concepts (POCs) including <b>chatbot creation</b> and <b>language model fine-tuning</b> (Lingualink), alongside tasks involving <b>MES data analysis</b>.
-            </li>
-        </ul>
-<p class="mt-3"><i>Project work are detailed in the <a href="#Projects" class="js-scroll-trigger">Projects section</a>.</i></p>    </div>
-    <div class="flex-shrink-0"><span class="text-primary">July 2024 - Present</span></div>
-</div>
 
-<div class="d-flex flex-column flex-md-row justify-content-between mb-5 align-items-center">
-    <div class="flex-grow-1">
-        <h3 class="mb-0 d-flex align-items-center">
-            Research Intern (AI & Metaverse)
-                    <img src="assets/img/siemens_logo.png" alt="Siemens Logo" style="width:100px; height:auto; margin-left:10px;">
-        </h3>
-                <div class="subheading mb-3">Siemens Technology, Bengaluru</div>
-        <ul>
-            <li>Developed a <b>Virtual Factory In Unity 3d</b> replicating real-world industrial environments.</li>
-            <li>Applied <b>Genetic Algorithm</b> for optimized layout planning, improving efficiency while considering space, machine availability, ergonomics, and safety.</li>
-            <li>Designed an <b>Employee Authentication Model</b> to ensure secure access and data integrity in the virtual factory.</li>
-        </ul>
-    </div>
-    <div class="flex-shrink-0"><span class="text-primary">June 2023 - August 2023</span></div>
-</div>
+        <div class="timeline-container">
 
-    </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content right">
+                    <div class="timeline-date"><span class="text-primary" style="color:  #009999 !important;">July 2024 - Present</span></div>
+                    
+                    <h3 class="mb-0 d-flex align-items-center">
+                        Engineer - Automation & Digitalisation
+                        <img src="assets/img/atlascopco_logo.png" alt="Atlas Copco Logo" style="width:100px; height:auto; margin-left:10px;">
+                    </h3>
+                    <div class="subheading mb-3">Atlascopco Group (GECIA), Pune</div>
+                    <ul class="fa-ul mb-0">
+                        <li><span class="fa-li"><i class="fas fa-wrench"></i></span>Contributing to the <b>GECIA Industry 4.0 Lab</b> development.</li>
+                        <li><span class="fa-li"><i class="fas fa-cogs"></i></span>Architecting and implementing <b>MES-PLC communication</b> (Kepware, OPC UA).</li>
+                        <li><span class="fa-li"><i class="fas fa-cubes"></i></span>Developing <b>Process Simulations</b> (Visual Components) for customer centers.</li>
+                        <li><span class="fa-li"><i class="fas fa-project-diagram"></i></span>Building <b>Computer Vision POCs</b> (YOLO) for O-Ring & Kit Checking.</li>
+                        <li><span class="fa-li"><i class="fas fa-cloud"></i></span>Configuring <b>Azure IoT Hub</b> pipelines for sensor data analysis (Power BI).</li>
+                        <li><span class="fa-li"><i class="fas fa-brain"></i></span>Leading NLP (<b>LinguaLink</b>) and <b>Chatbot</b> POCs.</li>
+                    </ul>
+                    <p class="mt-3"><i>Project work is detailed in the <a href="#Projects" class="js-scroll-trigger">Projects section</a>.</i></p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content left">
+                    <div class="timeline-date"><span class="text-primary" style="color:  #009999 !important;">June 2023 - August 2023</span></div>
+                    
+                    <h3 class="mb-0 d-flex align-items-center">
+                        Research Intern (AI & Metaverse)
+                        <img src="assets/img/siemens_logo.png" alt="Siemens Logo" style="width:100px; height:auto; margin-left:10px;">
+                    </h3>
+                    <div class="subheading mb-3">Siemens Technology, Bengaluru</div>
+                    <ul class="fa-ul mb-0">
+                        <li><span class="fa-li"><i class="fas fa-cube"></i></span>Developed a <b>Virtual Factory in Unity 3D</b> for an industrial metaverse project.</li>
+                        <li><span class="fa-li"><i class="fas fa-dna"></i></span>Applied a <b>Genetic Algorithm</b> for optimized factory layout planning.</li>
+                        <li><span class="fa-li"><i class="fas fa-shield-alt"></i></span>Designed an <b>Employee Authentication Model</b> for secure access in the metaverse.</li>
+                    </ul>
+                </div>
+            </div>
+
+            </div> </div>
+</section>            
+            <hr class="m-0" />
+<section class="resume-section" id="education">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+            <div class="col">
+                <div class="education-card h-100 p-4">
+                    <div class="d-flex align-items-start">
+                        <img src="assets/img/IISc-Final.png" alt="IISc Logo" class="education-logo me-3">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Indian Institute of Science</h3>
+                            <div class="subheading mb-2">Master Of Technology</div>
+                            <p class="mb-1">Smart Manufacturing</p>
+                            <p class="mb-0">Grade: A</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-white-50 small" style="color:  white !important;">Aug 2022 - May 2024</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="education-card h-100 p-4">
+                    <div class="d-flex align-items-start">
+                        <img src="assets/img/aktu_logo.png" alt="AKTU Logo" class="education-logo me-3">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Dr. APJ Abdul Kalam Technical University</h3>
+                            <div class="subheading mb-2">Bachelor Of Technology</div>
+                            <p class="mb-1"></p> <p class="mb-0">Grade: A</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-white-50 small" style="color:  white !important;" >Aug 2018 - May 2022</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="education-card h-100 p-4">
+                    <div class="d-flex align-items-start">
+                        <img src="assets/img/cbse_logo.png" alt="CBSE Logo" class="education-logo me-3">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Central Board of Secondary Education</h3>
+                            <div class="subheading mb-2">Intermediate (Class XII)</div>
+                             <p class="mb-0">PCM Stream</p> </div>
+                        <div class="flex-shrink-0"><span class="text-white-50 small" style="color:  white !important;">2017 - 2018</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="education-card h-100 p-4">
+                    <div class="d-flex align-items-start">
+                        <img src="assets/img/cbse_logo.png" alt="CBSE Logo" class="education-logo me-3">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Central Board of Secondary Education</h3>
+                            <div class="subheading mb-2">High School (Class X)</div>
+                             <p class="mb-0">CGPA: 10</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-white-50 small" style="color:  white !important;">2015 - 2016</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div>
 </section>
+            <hr class="m-0" />
 
-                    <hr class="m-0" />
-            <section class="resume-section" id="education">
+            <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-    <h2 class="mb-5">Education</h2>
+                    <h2 class="mb-5">Skills</h2>
+                    
+                    <div class="subheading mb-3">Automation & Industry 4.0</div>
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-network-wired fa-2x text-light mb-2" style="color:  #009999 !important;" ></i>
+                                <h4 class="mb-0 text-dark" >IT/OT Convergence & Protocols</h4>
+                                <p class="small text-muted mb-0">Integrating IT/OT systems; Experience with Industrial Protocols (OPC UA, MQTT).</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-cogs fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">PLC & Control Systems</h4>
+                                <p class="small text-muted mb-0">Basic PLC understanding (Ladder Logic); Familiarity with <b>ISPSoft</b>, <b>TIA Portal</b>, <b>SIMATIC Manager</b>; SCADA/HMI development (Ignition).</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-cubes fa-2x mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Simulation & Digital Twin</h4>
+                                <p class="small text-muted mb-0">Process Simulation (<b>Visual Components</b>); Applying Digital Twin concepts for analysis.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-camera-retro fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Vision Systems & Cloud</h4>
+                                <p class="small text-muted mb-0">Industrial Camera Selection fundamentals; Basic IoT Cloud Integration (Azure).</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-5 align-items-center">
-        <div class="flex-grow-1 d-flex align-items-center">
-            <img src="assets/img/iisc_logo.png" alt="IISc Logo" class="me-3" style="width:100px; height:auto;">
-            <div>
-                <h3 class="mb-0">Indian Institute Of Science</h3>
-                <div class="subheading mb-3">Master Of Technology</div>
-                <div>Smart Manufacturing</div>
-                <p>Grade A</p>
-            </div>
-        </div>
-        <div class="flex-shrink-0"><span class="text-primary">August 2022 - May 2024</span></div>
-    </div>
+                    <div class="subheading mb-3">AI & Robotics</div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-robot fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Robotics & Simulation</h4>
+                                <p class="small text-muted mb-0">Hands-on experience with <b>DOBOT Magician</b>; Familiarity with industrial arms (e.g., FANUC R-2000iC); Robot Simulation (<b>Visual Components</b>).</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-brain fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">AI & Machine Learning</h4>
+                                <p class="small text-muted mb-0">Applying concepts in <b>Machine Learning</b>, <b>NLP</b>, and <b>GenAI</b>; Experience with frameworks like <b>TensorFlow</b> and <b>Scikit-Learn</b>.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-camera fa-2x text-primary mb-2" style="color:  #009999 !important;"> </i>
+                                <h4 class="mb-0 text-dark">Computer Vision & Data Tools</h4>
+                                <p class="small text-muted mb-0">Experience with <b>Computer Vision</b> techniques using <b>OpenCV</b>; Data manipulation and visualization (<b>Pandas</b>, <b>Numpy</b>, <b>Matplotlib</b>, <b>Seaborn</b>).</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-5 align-items-center">
-        <div class="flex-grow-1 d-flex align-items-center">
-            <img src="assets/img/aktu_logo.png" alt="AKTU Logo" class="me-3" style="width:100px; height:auto;">
-            <div>
-                <h3 class="mb-0">Dr. APJ Abdul Kalam Technical University</h3>
-                <div class="subheading mb-3">Bachelor Of Technology</div>
-                <p>Grade A</p>
-            </div>
-        </div>
-        <div class="flex-shrink-0"><span class="text-primary">August 2018 - May 2022</span></div>
-    </div>
+                    <div class="subheading mb-3">Hardware Knowledge</div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-vr-cardboard fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">VR/AR Headsets</h4>
+                                <p class="small text-muted mb-0">Experience with HTC Vive, HoloLens 2.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-hands-clapping fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Haptic Devices</h4>
+                                <p class="small text-muted mb-0">Familiarity with 3D Systems Touch, Leap Motion.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-microchip fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Edge Computing & IoT Hardware</h4>
+                                <p class="small text-muted mb-0">Working with Jetson Xavier/Nano; IoT Modules (e.g., <b>WISE 4250 S232</b>).</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="d-flex flex-column flex-md-row justify-content-between mb-5 align-items-center">
-        <div class="flex-grow-1 d-flex align-items-center">
-            <img src="assets/img/cbse_logo.png" alt="CBSE Logo" class="me-3" style="width:100px; height:auto;">
-            <div>
-                <h3 class="mb-0">Central Board of Secondary Education</h3>
-                <div class="subheading mb-3">Intermediate</div>
-                <p>Grade A</p>
-            </div>
-        </div>
-        <div class="flex-shrink-0"><span class="text-primary">April 2017 - May 2018</span></div>
-    </div>
+                    <div class="subheading mb-3">Software & Platforms</div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <img src="assets/img/Unity.svg" class="skill-logo fa-2x mb-2" alt="Unity Logo">
+                                <h4 class="mb-0 text-dark">Unity</h4>
+                                <p class="small text-muted mb-0">Developing immersive environments for Digital Twin & Simulation.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <img src="assets/img/nodered.png" class="skill-logo fa-2x mb-2" alt="Nodered Logo">
+                                <h4 class="mb-0 text-dark">Nodered</h4>
+                                <p class="small text-muted mb-0">Rapid development for IoT data flow orchestration and visualization.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-cogs fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Industrial Connectivity</h4>
+                                <p class="small text-muted mb-0"><b>Kepware</b> & <b>OPC Router</b> for PLC/OT device communication and data bridging.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-database fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Databases & Visualization</h4>
+                                <p class="small text-muted mb-0">Experience with <b>SQL Server</b>, <b>MongoDB</b>, <b>InfluxDB</b> (Time Series); Dashboarding with <b>Grafana</b>.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <img src="assets/img/Azure.png" class="skill-logo fa-2x mb-2" alt="Azure Logo">
+                                <h4 class="mb-0 text-dark">Microsoft Azure</h4>
+                                <p class="small text-muted mb-0">Utilizing <b>IoT Hub</b>, <b>Logic Apps</b>, <b>Functions</b>, <b>Stream Analytics</b>, ML & <b>OpenAI</b> services.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
+                                <i class="fas fa-bolt fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Low-Code & IIoT</h4>
+                                <p class="small text-muted mb-0">Developing applications using <b>Microsoft Power Platform</b> and industrial IoT platforms.</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <div class="flex-grow-1 d-flex align-items-center">
-            <img src="assets/img/cbse_logo.png" alt="CBSE Logo" class="me-3" style="width:100px; height:auto;">
-            <div>
-                <h3 class="mb-0">Central Board of Secondary Education</h3>
-                <div class="subheading mb-3">High School</div>
-                <p>CGPA: 10</p>
-            </div>
-        </div>
-        <div class="flex-shrink-0"><span class="text-primary">April 2015 - May 2016</span></div>
-    </div>
-</div>
+                    <div class="subheading mb-3">Programming & Data Management</div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <i class="fab fa-python fa-2x text-primary mb-2" style="color:  #009999 !important;"></i> <h4 class="mb-0 text-dark">Python, C#</h4>
+                                <p class="small text-muted mb-0">Backend Development & Automation Scripts</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <img src="assets/img/github.png" class="skill-logo fa-2x mb-2" alt="GitHub Logo">
+                                <h4 class="mb-0 text-dark">GitHub</h4>
+                                <p class="small text-muted mb-0">Version Control & Collaborative Development</p>
+                            </div>
+                        </div>
+                        <div class="col d-none d-lg-block"></div>
+                    </div>
 
-</section>
-<hr class="m-0" />
-<section class="resume-section" id="skills">
+                    <div class="subheading mb-3">Professional & Methodologies</div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <i class="fas fa-tasks fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Agile & Scrum Methodologies</h4>
+                                <p class="small text-muted mb-0">Structured Project Execution</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <i class="fas fa-users fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark">Team Collaboration</h4> <p class="small text-muted mb-0">Cross-functional Teamwork & Vendor Coordination</p> </div>
+                        </div>
+                        <div class="col">
+                            <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <i class="fas fa-lightbulb fa-2x text-primary mb-2" style="color:  #009999 !important;"></i>
+                                <h4 class="mb-0 text-dark"> Innovative Problem Solving</h4>
+                                <p class="small text-muted mb-0">Developing practical solutions for complex challenges</p> </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4"/>
+                    <div class="subheading mb-3">M.Tech Coursework</div>
+                    <p class="text-muted">
+                        Key academic subjects covered during M.Tech in Smart Manufacturing included:
+                    </p>
+                    <div class="row row-cols-1 row-cols-sm-2">
+                         <div class="col">
+                             <ul class="list-unstyled">
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Materials and Processes</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Digital Manufacturing</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Creative Engineering Design</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Sensors & Transducers</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Computing, AI & Data Science Basics</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Operations Management</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Design for Additive Manufacturing</li>
+                             </ul>
+                         </div>
+                         <div class="col">
+                             <ul class="list-unstyled">
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Human Machine Interfaces</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Data Analytics</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Decision Models</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Data Mining</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Natural Language Processing (NLP)</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Computer Vision (CV)</li>
+                                 <li><i class="fas fa-book-open text-primary me-2" style="color:  #009999 !important;"></i>Probability & Statistics</li>
+                             </ul>
+                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="m-0" />
+
+            <section class="resume-section" id="researchpapers">
+                 <div class="resume-section-content">
+                    <h2 class="mb-5">Research Publications</h2>
+                    <p class="mb-4">
+                        My research focuses on <b>Industrial Automation, Artificial Intelligence (AI), Digital Twin, Extended Reality (XR), and the Industrial Metaverse</b>.
+                        Below are publications with supplementary videos and images.
+                    </p>
+                    <div class="mb-5">
+                        <h3 class="mb-2">Ham3d: Generalized XR-Based Multimodal HRI Framework With Haptic Feedback for Industry 4.0</h3>
+                        <p class="text-muted mb-3">
+                            <i>Journal On Multimodal User Interfaces — Springer</i> · Nov 11, 2024
+                        </p>
+                        <a href="https://link.springer.com/article/10.1007/s12193-024-00443-y" target="_blank" class="btn btn-primary btn-sm mb-4">View Publication</a>
+                        <div class="row gx-4 justify-content-center">
+                            <div class="col-md-6 mb-3">
+                                <div style="position: relative; display: block; max-width: 100%;">
+                                    <a href="https://www.youtube.com/watch?v=oZ6rcBwvrwM" target="_blank" style="text-decoration: none;">
+                                        <img src="assets/img/Video1.png" alt="Research Video 1" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block;">
+                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24px" height="24px"><path d="M8 5v14l11-7z"/></svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <p class="mt-2 text-sm text-center text-muted" style="color: #ccc !important;">Demo of XR-Based HRI System.</p>
+                            </div>
+                             <div class="col-md-6 mb-3">
+                                <div style="position: relative; display: block; max-width: 100%;">
+                                    <a href="https://www.youtube.com/watch?v=HeuO0WgQa0A" target="_blank" style="text-decoration: none;">
+                                        <img src="assets/img/Video2.png" alt="Research Video 2" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: block;">
+                                         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24px" height="24px"><path d="M8 5v14l11-7z"/></svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <p class="mt-2 text-sm text-center text-muted" style="color: #ccc !important;">Haptic Feedback Experiment.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="mb-4">
+                        <h3 class="mb-2">Enhancing Production Efficiency Through Genetic Algorithm Assisted Visualization In Industrial Metaverse</h3>
+                        <p class="text-muted mb-3">
+                            <i>International Conference on Industry 4.0 and Advanced Manufacturing (I-4AM) — Springer</i> · Jan 12, 2024
+                        </p>
+                        <a href="https://link.springer.com/chapter/10.1007/978-981-97-6176-0_15" target="_blank" class="btn btn-primary btn-sm mb-4">View Publication</a>
+                         <div class="row gx-3 justify-content-center align-items-center">
+                             <div class="col-md-4 mb-3">
+                                 <img src="assets/img/Paper2pic1.jpg" alt="Initial Layout" class="img-fluid rounded shadow-sm">
+                                 <p class="mt-2 text-sm text-center text-muted" style="color: #ccc !important;">Research Presentation</p>
+                             </div>
+                             <div class="col-md-4 mb-3">
+                                  <img src="assets/img/Paper2pic2.jpg" alt="GA Optimization" class="img-fluid rounded shadow-sm">
+                                 <p class="mt-2 text-sm text-center text-muted" style="color: #ccc !important;">Genetic algorithm optimizing.</p>
+                             </div>
+                              <div class="col-md-4 mb-3">
+                                 <img src="assets/img/Paper2pic3.jpg" alt="Optimized Layout" class="img-fluid rounded shadow-sm">
+                                 <p class="mt-2 text-sm text-center text-muted" style="color: #ccc !important;">Optimized layout.</p>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="m-0" />
+<!-- <section class="resume-section project-section-light" id="Projects">
     <div class="resume-section-content">
-        <h2 class="mb-5">Skills</h2>
+        <h2 class="mb-5 text-dark">Projects</h2>
 
-        <div class="subheading mb-3">Automation & Industry 4.0</div>
-        <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-network-wired fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">IT/OT Convergence & Protocols</h4>
-                    <p class="small text-muted mb-0">Integrating IT/OT systems; Experience with Industrial Protocols (OPC UA, MQTT).</p>
-                </div>
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="3" aria-label="Project 4"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="4" aria-label="Project 5"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="5" aria-label="Project 6"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="6" aria-label="Project 7"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="7" aria-label="Project 8"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="8" aria-label="Project 9"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="9" aria-label="Project 10"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="10" aria-label="Project 11"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="11" aria-label="Project 12"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="12" aria-label="Project 13"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="13" aria-label="Project 14"></button>
             </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-cogs fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">PLC & Control Systems</h4>
-                    <p class="small text-muted mb-0">Basic PLC understanding (Ladder Logic); Familiarity with <b>ISPSoft</b>, <b>TIA Portal</b>, <b>SIMATIC Manager</b>; SCADA/HMI development (Ignition).</p>
+
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Project1.png" class="img-fluid rounded shadow" alt="HaM3D Project"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">HaM3D: XR Framework for Haptic HRI</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To enhance remote HRI for complex industrial tasks by developing an intuitive, multimodal XR framework with integrated haptic feedback.</p>
+                                <p class="mb-3 text-muted">
+                                    Developed <b>HaM3D</b>, an immersive XR (VR/MR) interface integrating visual, auditory, text, and haptic feedback. Utilized <b>Artificial Potential Field (APF)</b> for collision avoidance and <b>computer vision</b> to interpret the remote scene.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">XR</span><span class="badge bg-dark me-1 mb-1">Unity (VR/MR)</span><span class="badge bg-dark me-1 mb-1">HoloLens 2</span><span class="badge bg-dark me-1 mb-1">Haptic Feedback (APF)</span><span class="badge bg-dark me-1 mb-1">Computer Vision</span><span class="badge bg-dark me-1 mb-1">C#</span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-cubes fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Simulation & Digital Twin</h4>
-                    <p class="small text-muted mb-0">Process Simulation (<b>Visual Components</b>); Applying Digital Twin concepts for analysis.</p>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="assets/img/Project2.png" class="img-fluid rounded shadow" alt="Factory Layout Project"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">Optimized Factory Layout Planning</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To improve factory layout efficiency by combining Genetic Algorithm optimization with immersive visualization in an Industrial Metaverse.</p>
+                                <p class="mb-3 text-muted">
+                                    Developed a <b>Genetic Algorithm (GA)</b> to optimize machine placement considering constraints like proximity and material flow. Rendered solutions in an interactive <b>Industrial Metaverse (Unity)</b> for evaluation with <b>VR headsets</b>.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">Genetic Algorithms</span><span class="badge bg-dark me-1 mb-1">Industrial Metaverse</span><span class="badge bg-dark me-1 mb-1">VR</span><span class="badge bg-dark me-1 mb-1">Unity</span><span class="badge bg-dark me-1 mb-1">Python</span><span class="badge bg-dark me-1 mb-1">C#</span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-camera-retro fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Vision Systems & Cloud</h4>
-                    <p class="small text-muted mb-0">Industrial Camera Selection fundamentals; Basic IoT Cloud Integration (Azure).</p>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Project3.png" class="img-fluid rounded shadow" alt="VR Welding Project"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">Multimodal VR System for Remote Welding & Inspection</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To enhance the precision, safety, and inspection capabilities of remote welding operations using a multimodal VR framework.</p>
+                                <p class="mb-3 text-muted">
+                                    Integrated <b>multimodal feedback</b> into a <b>VR environment</b> with a <b>dynamic digital twin</b> (URDF) of a Dobot Magician. Integrated a <b>GelSight digit sensor</b> for real-time tactile inspection. Assessed trajectory accuracy using <b>Discrete Fréchet Distance (DFD)</b>.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">VR</span><span class="badge bg-dark me-1 mb-1">Digital Twin</span><span class="badge bg-dark me-1 mb-1">GelSight Sensor</span><span class="badge bg-dark me-1 mb-1">Trajectory Analysis (DFD)</span><span class="badge bg-dark me-1 mb-1">Unity</span><span class="badge bg-dark me-1 mb-1">Python (Flask API)</span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Project4.png" class="img-fluid rounded shadow" alt="VR Maintenance Project"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">VR & ML for Enhanced Maintenance Learning</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To develop an immersive VR learning platform for maintenance workers, integrating ML for real-time fault identification.</p>
+                                <p class="mb-3 text-muted">
+                                    Created a VR training solution in <b>Unity</b> for practicing assembly/disassembly. Integrated an <b>ML model (1D-CNN)</b> trained for <b>bearing fault detection</b> (CWRU dataset), which visualizes real-time fault predictions within the VR interface.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">VR</span><span class="badge bg-dark me-1 mb-1">Machine Learning (ML)</span><span class="badge bg-dark me-1 mb-1">1D-CNN</span><span class="badge bg-dark me-1 mb-1">Fault Detection</span><span class="badge bg-dark me-1 mb-1">Unity</span><span class="badge bg-dark me-1 mb-1">Python (TensorFlow)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Project5.png" class="img-fluid rounded shadow" alt="LinguaLink Project"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">LinguaLink: In-House AI Translation Tool</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To address high costs and delays in technical document translation by developing a customizable in-house AI solution.</p>
+                                <p class="mb-3 text-muted">
+                                    Developed and fine-tuned "LinguaLink," an AI tool based on the <b>Transformer</b> architecture. Utilized the <b>Helsinki-NLP</b> model and fine-tuned it on internal Atlas Copco data. Achieved a <b>BLEU score of 0.7+</b>.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">NLP</span><span class="badge bg-dark me-1 mb-1">Machine Translation</span><span class="badge bg-dark me-1 mb-1">Transformer Models</span><span class="badge bg-dark me-1 mb-1">Model Fine-tuning</span><span class="badge bg-dark me-1 mb-1">Python</span><span class="badge bg-dark me-1 mb-1">BLEU Score</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Picture6.png" class="img-fluid rounded shadow" alt="Sensor Data Logging Project"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">Industrial Sensor Data Logging & Analysis (In Progress)</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To establish a cloud-based pipeline for logging and analyzing industrial sensor data for real-time monitoring.</p>
+                                <p class="mb-3 text-muted">
+                                    Developing a system to connect an <b>Advantech WISE-4250-S232</b> sensor via <b>MQTT</b> to <b>Microsoft Azure IoT Hub</b>. Currently focused on data logging and creating visualization dashboards in <b>Power BI</b>.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">Azure IoT Hub</span><span class="badge bg-dark me-1 mb-1">MQTT</span><span class="badge bg-dark me-1 mb-1">Advantech WISE Sensors</span><span class="badge bg-dark me-1 mb-1">IIoT</span><span class="badge bg-dark me-1 mb-1">Power BI</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Azurepipelien.png" class="img-fluid rounded shadow" alt="Shop Floor Data Analysis"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">Shop Floor Operator Performance Analysis (In Progress)</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To analyze shop floor operator data (from Azumuta, BPCS) to identify operational trends, bottlenecks, and areas for efficiency improvement.</p>
+                                <p class="mb-3 text-muted">
+                                    Currently developing an <b>Azure data pipeline</b> to ingest operator performance data via APIs. The initial phase involves processing data from <b>Azumuta</b> and visualizing KPIs in <b>Power BI</b>.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">Azure (Data Pipeline)</span><span class="badge bg-dark me-1 mb-1">Power BI</span><span class="badge bg-dark me-1 mb-1">Data Analysis</span><span class="badge bg-dark me-1 mb-1">API Integration</span><span class="badge bg-dark me-1 mb-1">Azumuta</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Kepware.png" class="img-fluid rounded shadow" alt="MES-PLC Communication"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">MES-PLC Communication Architecture</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To implement a robust communication architecture between the .NET-based AC New MES and shop floor PLCs at the Pune PNE Plant.</p>
+                                <p class="mb-3 text-muted">
+                                    Architected a solution using <b>Kepware</b> as middleware to bridge the MES and Siemens PLCs via <b>OPC UA</b>. Utilized Kepware's <b>Advanced Tags</b> for real-time event triggering (WorkStart/Stop, Andon). The system is now <b>live in production</b>.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">MES Integration</span><span class="badge bg-dark me-1 mb-1">PLC (Siemens)</span><span class="badge bg-dark me-1 mb-1">Kepware</span><span class="badge bg-dark me-1 mb-1">OPC UA</span><span class="badge bg-dark me-1 mb-1">Event Triggering</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Oring.gif" class="img-fluid rounded shadow" alt="O-Ring Detection POC"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">Automated O-Ring Detection System (POC)</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To prevent assembly errors and reduce rework costs by automating O-ring presence verification using computer vision.</p>
+                                <p class="mb-3 text-muted">
+                                    Developed a POC integrating <b>Computer Vision</b> (fine-tuned <b>YOLO</b>) with a <b>Siemens S7-315 PLC</b> via <b>Kepware (OPC UA)</b>. The system includes barcode scanning, indicator lamps, event logging, and a <b>Flask</b> backend.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">Computer Vision (YOLO)</span><span class="badge bg-dark me-1 mb-1">PLC (Siemens S7)</span><span class="badge bg-dark me-1 mb-1">Kepware / OPC UA</span><span class="badge bg-dark me-1 mb-1">Flask (Python)</span><span class="badge bg-dark me-1 mb-1">System Integration</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Kitting.gif" class="img-fluid rounded shadow" alt="Kit Fill Checker POC"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">Automated Kit Fill Checker System (POC)</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To ensure accuracy in spare parts kitting and improve traceability using computer vision and Poka-Yoke principles.</p>
+                                <p class="mb-3 text-muted">
+                                    Developed a POC to verify kit contents using a fine-tuned <b>YOLO model</b>. Integrated <b>barcode scanning</b> for identification and <b>barcode generation</b> for Poka-Yoke labeling of correct kits. Includes a manual override option with operator logging.
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">Computer Vision (YOLO)</span><span class="badge bg-dark me-1 mb-1">Barcode Scanning</span><span class="badge bg-dark me-1 mb-1">Barcode Generation</span><span class="badge bg-dark me-1 mb-1">Poka-Yoke</span><span class="badge bg-dark me-1 mb-1">Data Logging</span></g>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-content-wrapper">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-4 mb-lg-0"><img src="./assets/img/Project6.png" class="img-fluid rounded shadow" alt="Surface Defect Detection"></div>
+                            <div class="col-lg-6">
+                                <h3 class="mb-3 text-primary">AI & Vision-Based Robot for Surface Defect Detection</h3>
+                                <p class="text-dark"><strong>Goal:</strong> To automate NDE detection of surface defects on 3D-printed components using a robotic arm and computer vision.</p>
+                                <p class="mb-3 text-muted">
+                                    Utilized a <b>DOBOT Magician</b> robot with a camera to scan a 3D-printed aircraft wing model. Implemented robot <b>path planning</b> (Lawnmower pattern) and <b>camera calibration</b>. Trained a <b>YOLOv8</b> model on a custom, augmented dataset (<b>Roboflow</b>).
+                                </p>
+                                <p class="mb-2"><strong>Technologies:</strong> <span class="badge bg-dark me-1 mb-1">Computer Vision (YOLOv8)</span><span class="badge bg-dark me-1 mb-1">Robotics (DOBOT)</span><span class="badge bg-dark me-1 mb-1">Path Planning</span><span class->   <hr class="m-0" />
+             -->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards, Certifications & Training</h2>
+                    <ul class="fa-ul mb-0">
+                        <li><span class="fa-li"><i class="fas fa-certificate text-warning"></i></span><b>Project Management Training</b> - Dale Carnegie</li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span><b>Monthly Star Award:</b> Received 'Monthly Star Award' at Atlas Copco (GECIA) for creating a new competency in the team.</li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span><b>Fellowship:</b> Received Siemens Technology Research Fellowship (Aug 2022 - July 2024)</li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span><b>M.Tech Admissions:</b> Received admission offers from all top 7 IITs and IISc.</li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span><b>AIR 26 in GATE 2022</b> (March 2022)</li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span><b>Obtained a B.Tech Honors degree</b> as one of only three students in the college (March 2022)</li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span><b>Secured First Rank in NPTEL</b> "Industrial Internet of Things 4.0" MOOC Course (April 2021)</li>
+                        <li><span class="fa-li"><i class="fas fa-trophy text-warning"></i></span><b>First Prize</b> in <b>Quiz Competition</b> by National Textile Corporation Limited (Oct 2019)</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <hr class="m-0" />
+
+            <section class="resume-section" id="Highlights">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Highlights</h2>
+                    
+                    <div class="highlight-item mb-5 pb-5 border-bottom">
+                        <h3 class="mb-3 text-primary">Monthly Star Award From General Manager</h3>
+                        <p class="mb-4">Received the 'Monthly Star Award' from the General Manager at Atlas Copco (GECIA) for pioneering a new competency within the team. This recognition highlights my commitment to driving innovation and fostering skill development to enhance overall team capabilities.</p>
+                        <div class="row gx-2 justify-content-center">
+                            <div class="col-md-5 mx-auto mb-3">
+                                <img src="./assets/img/staraward.jpg" class="img-fluid rounded shadow" alt="Photo of the award being received.">
+                                <p class="text-center text-muted mt-2">Receiving The Award From The General Manager.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-item mb-5 pb-5 border-bottom">
+                        <h3 class="mb-3 text-primary">Led Industrial Robotics Workshop (KARMA) @ VIT Pune</h3>
+                        <p class="mb-4">
+                            Organized and conducted the <b>KARMA (Knowledge Acquisition in Robotics for Manufacturing Automation)</b> workshop for 30 students at Vishwakarma Institute of Technology (VIT), Pune. Created a hands-on lab setup featuring a FANUC R-2000iC/165F robot to demonstrate aspects of the ISA-95 architecture. Provided instruction on robot programming, teach pendant usage, and Delta PLC ISPSoft software.
+                        </p>
+                        <div class="row gx-2">
+                            <div class="col-md-4 mb-3 text-center"> <img src="./assets/img/Workshop4.jpg" class="img-fluid rounded shadow" alt="Workshop ISA-95 Architecture Diagram.">
+                                <p class="text-muted mt-2">ISA-95 Architecture</p> </div>
+                            <div class="col-md-4 mb-3 text-center"> <img src="./assets/img/Workshop2.jpg" class="img-fluid rounded shadow" alt="Robot demonstration area during the workshop.">
+                                <p class="text-muted mt-2">Demonstration Area</p> </div>
+                            <div class="col-md-4 mb-3 text-center"> <img src="./assets/img/Workshop3.jpg" class="img-fluid rounded shadow" alt="Theoretical knowledge sharing session.">
+                                <p class="text-muted mt-2">Knowledge Sharing</p> </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item mb-5 pb-5 border-bottom">
+                        <h3 class="mb-3 text-primary">Presenting Conference Paper</h3>
+                        <p class="mb-4">Successfully presented my research on the Industrial Metaverse at a global conference. This experience was invaluable for sharing my work with experts and receiving feedback on the latest innovations in Industry 4.0 technology.</p>
+                        <div class="row gx-2 justify-content-center">
+                            <div class="col-md-5 mx-auto mb-3">
+                                <img src="./assets/img/conference.jpg" class="img-fluid rounded shadow" alt="Photo of Nirbhay presenting the conference paper.">
+                                <p class="text-center text-muted mt-2">Presenting the research findings.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight-item mb-5 pb-5 border-bottom">
+                        <h3 class="mb-3 text-primary">Siemens Technology Research Fellowship</h3>
+                        <p class="mb-4">Awarded the prestigious Siemens Research Fellowship, which fully funded my M.Tech at IISc. This opportunity allowed me to conduct cutting-edge research on topics like the Industrial Metaverse and AI-driven factory optimization, contributing to the future of Industry 4.0.</p>
+                        <div class="row gx-2 justify-content-center">
+                            <div class="col-md-6 mx-auto mb-3">
+                                <img src="./assets/img/Fellowship.jpg" class="img-fluid rounded shadow" alt="Photo of Siemens office or logo.">
+                                <p class="text-center text-muted mt-2">Received Fellowship From Siemens Dignitaries</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            
         </div>
-
-        <div class="subheading mb-3">AI & Robotics</div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-robot fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Robotics & Simulation</h4>
-                    <p class="small text-muted mb-0">Hands-on experience with <b>DOBOT Magician</b>; Familiarity with industrial arms (e.g., FANUC R-2000iC); Robot Simulation (<b>Visual Components</b>).</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-brain fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">AI & Machine Learning</h4>
-                    <p class="small text-muted mb-0">Applying concepts in <b>Machine Learning</b>, <b>NLP</b>, and <b>GenAI</b>; Experience with frameworks like <b>TensorFlow</b> and <b>Scikit-Learn</b>.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-camera fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Computer Vision & Data Tools</h4>
-                    <p class="small text-muted mb-0">Experience with <b>Computer Vision</b> techniques using <b>OpenCV</b>; Data manipulation and visualization (<b>Pandas</b>, <b>Numpy</b>, <b>Matplotlib</b>, <b>Seaborn</b>).</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="subheading mb-3">Hardware Knowledge</div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-vr-cardboard fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">VR/AR Headsets</h4>
-                    <p class="small text-muted mb-0">Experience with HTC Vive, HoloLens 2.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-hands-clapping fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Haptic Devices</h4>
-                    <p class="small text-muted mb-0">Familiarity with 3D Systems Touch, Leap Motion.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-microchip fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Edge Computing & IoT Hardware</h4>
-                    <p class="small text-muted mb-0">Working with Jetson Xavier/Nano; IoT Modules (e.g., <b>WISE 4250 S232</b>).</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="subheading mb-3">Software & Platforms</div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <img src="assets/img/Unity.svg" class="skill-logo fa-2x mb-2" alt="Unity Logo">
-                    <h4 class="mb-0 text-dark">Unity</h4>
-                    <p class="small text-muted mb-0">Developing immersive environments for Digital Twin & Simulation.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <img src="assets/img/nodered.png" class="skill-logo fa-2x mb-2" alt="Nodered Logo">
-                    <h4 class="mb-0 text-dark">Nodered</h4>
-                    <p class="small text-muted mb-0">Rapid development for IoT data flow orchestration and visualization.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-cogs fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Industrial Connectivity</h4>
-                    <p class="small text-muted mb-0"><b>Kepware</b> & <b>OPC Router</b> for PLC/OT device communication and data bridging.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-database fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Databases & Visualization</h4>
-                    <p class="small text-muted mb-0">Experience with <b>SQL Server</b>, <b>MongoDB</b>, <b>InfluxDB</b> (Time Series); Dashboarding with <b>Grafana</b>.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <img src="assets/img/Azure.png" class="skill-logo fa-2x mb-2" alt="Azure Logo">
-                    <h4 class="mb-0 text-dark">Microsoft Azure</h4>
-                    <p class="small text-muted mb-0">Utilizing <b>IoT Hub</b>, <b>Logic Apps</b>, <b>Functions</b>, <b>Stream Analytics</b>, ML & <b>OpenAI</b> services.</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100">
-                    <i class="fas fa-bolt fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Low-Code & IIoT</h4>
-                    <p class="small text-muted mb-0">Developing applications using <b>Microsoft Power Platform</b> and industrial IoT platforms.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="subheading mb-3">Programming & Data Management</div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <i class="fab fa-python fa-2x text-primary mb-2"></i> <h4 class="mb-0 text-dark">Python, C#</h4>
-                    <p class="small text-muted mb-0">Backend Development & Automation Scripts</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <img src="assets/img/github.png" class="skill-logo fa-2x mb-2" alt="GitHub Logo">
-                    <h4 class="mb-0 text-dark">GitHub</h4>
-                    <p class="small text-muted mb-0">Version Control & Collaborative Development</p>
-                </div>
-            </div>
-            <div class="col d-none d-lg-block"></div> </div>
-
-        <div class="subheading mb-3">Professional & Methodologies</div>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4"> <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <i class="fas fa-tasks fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Agile & Scrum Methodologies</h4>
-                    <p class="small text-muted mb-0">Structured Project Execution</p>
-                </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <i class="fas fa-users fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark">Team Collaboration</h4> <p class="small text-muted mb-0">Cross-functional Teamwork & Vendor Coordination</p> </div>
-            </div>
-            <div class="col">
-                <div class="skill-card text-center p-3 border rounded shadow-sm h-100"> <i class="fas fa-lightbulb fa-2x text-primary mb-2"></i>
-                    <h4 class="mb-0 text-dark"> Innovative Problem Solving</h4>
-                    <p class="small text-muted mb-0">Developing practical solutions for complex challenges</p> </div>
-            </div>
-        </div>
-
-        <hr class="my-4"/>
-        <div class="subheading mb-3">M.Tech Coursework</div>
-        <p class="text-muted">
-            Key academic subjects covered during M.Tech in Smart Manufacturing included:
-        </p>
-        <div class="row row-cols-1 row-cols-sm-2">
-             <div class="col">
-                 <ul class="list-unstyled">
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Materials and Processes</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Digital Manufacturing</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Creative Engineering Design</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Sensors & Transducers</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Computing, AI & Data Science Basics</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Operations Management</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Design for Additive Manufacturing</li>
-                 </ul>
-             </div>
-             <div class="col">
-                 <ul class="list-unstyled">
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Human Machine Interfaces</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Data Analytics</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Decision Models</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Data Mining</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Natural Language Processing (NLP)</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Computer Vision (CV)</li>
-                     <li><i class="fas fa-book-open text-primary me-2"></i>Probability & Statistics</li>
-                 </ul>
-             </div>
-        </div>
-
-    </div> </section> 
-<hr class="m-0" />
-<section class="resume-section" id="researchpapers">
-  <div class="resume-section-content">
-    <h2 class="mb-5">Research Publications</h2>
-    <p class="mb-10">
-      My research focuses on <b>Industrial Automation, Artificial Intelligence (AI), Digital Twin, Extended Reality (XR), and the Industrial Metaverse</b>. 
-      Below are my publications with supplementary videos and images.
-    </p>
-
-    <div class="mb-16">
-      <h3 class="text-2xl font-semibold mb-2">
-        Ham3d: Generalized XR-Based Multimodal HRI Framework With Haptic Feedback for Industry 4.0
-      </h3>
-      <p class="text-gray-600 mb-4">
-        <i>Journal on Multimodal User Interfaces — Springer</i> · Nov 11, 2024
-      </p>
-      
-      <a href="https://link.springer.com/article/10.1007/s12193-024-00443-y" 
-          target="_blank" 
-          class="btn btn-primary">
-        View Publication
-      </a>
-      
-      <div class="mt-4 mb-5"></div>
-
-      <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
-
-        <div style="text-align: center; position: relative; display: inline-block;">
-          <a href="https://www.youtube.com/watch?v=oZ6rcBwvrwM" target="_blank" style="text-decoration: none;">
-            <img src="assets/img/Video1.png" 
-                  alt="Research Video 1" 
-                  style="width: 360px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-            <div style="position: absolute; top: 50%; left: 50%; 
-                        transform: translate(-50%, -50%);
-                        background: rgba(0,0,0,0.6); 
-                        border-radius: 50%; 
-                        width: 64px; height: 64px; 
-                        display: flex; align-items: center; justify-content: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="36px" height="36px">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </a>
-          <p class="mt-2 text-sm text-gray-600">Research Video 1 – Demonstration of XR-Based HRI System.</p>
-        </div>
-
-        <div style="text-align: center; position: relative; display: inline-block;">
-          <a href="https://www.youtube.com/watch?v=HeuO0WgQa0A" target="_blank" style="text-decoration: none;">
-            <img src="assets/img/Video2.png" 
-                  alt="Research Video 2" 
-                  style="width: 360px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-            <div style="position: absolute; top: 50%; left: 50%; 
-                        transform: translate(-50%, -50%);
-                        background: rgba(0,0,0,0.6); 
-                        border-radius: 50%; 
-                        width: 64px; height: 64px; 
-                        display: flex; align-items: center; justify-content: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="36px" height="36px">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </a>
-          <p class="mt-2 text-sm text-gray-600">Research Video 2 – Haptic Feedback Experiment in Industry 4.0 Scenario.</p>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="mb-16">
-      <h3 class="text-2xl font-semibold mb-2">
-        Enhancing Production Efficiency Through Genetic Algorithm Assisted Visualization In Industrial Metaverse: Factory Layout Planning Scenario
-      </h3>
-      <p class="text-gray-600 mb-4">
-        <i>International Conference on Industry 4.0 and Advanced Manufacturing (I-4AM) — Springer</i> · Jan 12, 2024
-      </p>
-
-      <a href="https://link.springer.com/chapter/10.1007/978-981-97-6176-0_15" 
-          target="_blank" 
-          class="btn btn-primary">
-        View Publication
-      </a>
-      
-    <div class="mt-4 mb-5"></div>
-
-      <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
         
-        <div style="text-align: center;">
-          <img src="assets/img/Paper2pic1.jpg" alt="Screenshot 1" style="width: 450px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-          <p class="mt-2 text-sm text-gray-600">Research Presentation</p>
-        </div>
-
-        <div style="display: flex; flex-direction: column; gap: 12px; justify-content: center;">
-          
-          <div style="text-align: center;">
-            <img src="assets/img/Paper2pic2.jpg" alt="Screenshot 2" style="width: 350px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-            <p class="mt-2 text-sm text-gray-600">Genetic algorithm optimizing the layout.</p>
-          </div>
-
-          <div style="text-align: center;">
-            <img src="assets/img/Paper2pic3.jpg" alt="Screenshot 3" style="width: 350px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-            <p class="mt-2 text-sm text-gray-600">Optimized layout.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-<section class="resume-section" id="Projects">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Projects</h2>
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-            <img src="./assets/img/Project1.png" class="img-fluid rounded shadow" alt="HaM3D XR Haptic Interaction Project Image">
-        </div>
-        <div class="col-lg-6">
-            <h3 class="mb-3 text-primary">HaM3D: XR Framework for Haptic Human-Robot Interaction</h3>
-            <p><strong>Goal:</strong> To enhance remote Human-Robot Interaction (HRI) for complex industrial tasks (like assembly and welding) by developing an intuitive, multimodal Extended Reality (XR) framework with integrated haptic feedback.</p>
-            <p class="mb-3">
-                Developed <b>HaM3D (Haptic and Multimodal framework for 3D Display)</b>, an immersive XR (VR/MR) interface addressing limitations in traditional teleoperation. The system integrates visual (virtual replicas, video), auditory (speech, sound), text, and haptic feedback. Haptic guidance using the <b>Artificial Potential Field (APF)</b> method assists operators in collision avoidance. <b>Computer vision</b> models interpret the remote scene for presentation in XR. Validated through user studies involving industrial tasks like <b>peg-in-hole assembly</b> and <b>arc welding</b>.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Extended Reality (XR)</span>
-                <span class="badge bg-secondary me-1 mb-1">Unity (VR/MR)</span>
-                 <span class="badge bg-secondary me-1 mb-1">HoloLens 2</span>
-                <span class="badge bg-secondary me-1 mb-1">HTC Vive</span>
-
-
-                <span class="badge bg-secondary me-1 mb-1">Haptic Feedback (APF)</span>
-                <span class="badge bg-secondary me-1 mb-1">Human-Robot Interaction (HRI)</span>
-                <span class="badge bg-secondary me-1 mb-1">Computer Vision</span>
-                <span class="badge bg-secondary me-1 mb-1">Robot Teleoperation</span>
-                <span class="badge bg-secondary me-1 mb-1">C#</span>
-                <span class="badge bg-secondary me-1 mb-1">Python</span>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0"> <h3 class="mb-3 text-primary">Optimized Factory Layout Planning in the Industrial Metaverse</h3>
-             <p><strong>Goal:</strong> To improve factory layout planning efficiency and decision-making by combining Genetic Algorithm optimization with immersive visualization in an Industrial Metaverse.</p>
-             <p class="mb-3">
-                 Developed an approach using a <b>Genetic Algorithm (GA)</b> to optimize the relative placement of machines and assembly lines within a defined factory floor space. The algorithm considers constraints like machine proximity, required production rates, material flow, and available area. The optimized layout solutions are then rendered and visualized within an interactive <b>Industrial Metaverse</b> environment built using <b>Unity</b>, allowing users to experience and evaluate the proposed layouts immersively via <b>VR headsets</b> before physical implementation. This method facilitates better spatial understanding, incorporates safety considerations (e.g., visual safety lines), and aims to improve space utilization and production efficiency compared to traditional methods.
-             </p>
-             <p class="mb-2">
-                 <strong>Key Technologies:</strong>
-                 <span class="badge bg-secondary me-1 mb-1">Genetic Algorithms (GA)</span>
-                 <span class="badge bg-secondary me-1 mb-1">Factory Layout Optimization</span>
-                 <span class="badge bg-secondary me-1 mb-1">Industrial Metaverse</span>
-                 <span class="badge bg-secondary me-1 mb-1">Virtual Reality (VR)</span>
-                 <span class="badge bg-secondary me-1 mb-1">Unity</span>
-                 <span class="badge bg-secondary me-1 mb-1">Process Visualization</span>
-                 <span class="badge bg-secondary me-1 mb-1">C#</span>
-                 <span class="badge bg-secondary me-1 mb-1">Python</span>
-                 <span class="badge bg-secondary me-1 mb-1">Web Sockets</span>
-             </p>
-        </div>
-         <div class="col-lg-6 order-lg-2"> <img src="assets/img/Project2.png" class="img-fluid rounded shadow" alt="Factory Layout Optimization in Metaverse Project Image">
-              </div>
-    </div>
-</div>
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-            <img src="./assets/img/Project3.png" class="img-fluid rounded shadow" alt="Multimodal VR Remote Welding and Inspection Project Image">
-        </div>
-        <div class="col-lg-6">
-            <h3 class="mb-3 text-primary">Multimodal VR System for Remote Welding & Inspection</h3>
-            <p><strong>Goal:</strong> To develop and evaluate a multimodal Virtual Reality (VR) system within an Industrial Metaverse framework, enhancing the precision, safety, and inspection capabilities of remote welding operations.</p>
-            <p class="mb-3">
-                This M.Tech project explored integrating <b>multimodal feedback (visual, auditory, haptic)</b> into a <b>VR environment</b> for remote robotic welding. The system utilized a <b>dynamic digital twin</b> (based on URDF) synchronized with a physical robot (Dobot Magician) via a custom API. Features included VR-based path visualization, automatic generation of intermediate weld points from CAD models, and multimodal user commands (voice, virtual buttons, haptics). A key component was the integration of a <b>GelSight digit sensor</b> (simulated and physical) for <b>real-time, vision-based tactile inspection</b> of weld quality within the VR interface. Trajectory accuracy was quantitatively assessed using <b>Discrete Fréchet Distance (DFD)</b>.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Virtual Reality (VR)</span>
-                <span class="badge bg-secondary me-1 mb-1">Industrial Metaverse</span>
-                <span class="badge bg-secondary me-1 mb-1">Digital Twin (URDF)</span>
-                <span class="badge bg-secondary me-1 mb-1">Multimodal Interaction</span>
-                <span class="badge bg-secondary me-1 mb-1">Haptic Feedback</span>
-                <span class="badge bg-secondary me-1 mb-1">GelSight Sensor / Tactile Sensing</span>
-                <span class="badge bg-secondary me-1 mb-1">Unity</span>
-                <span class="badge bg-secondary me-1 mb-1">Robot Teleoperation</span>
-                <span class="badge bg-secondary me-1 mb-1">Trajectory Analysis (DFD)</span>
-                <span class="badge bg-secondary me-1 mb-1">Cloud Integration (Firebase)</span>
-                <span class="badge bg-secondary me-1 mb-1">C#</span>
-                <span class="badge bg-secondary me-1 mb-1">Python (Flask API)</span>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0"> <h3 class="mb-3 text-primary">VR & ML for Enhanced Maintenance Learning in the Industrial Metaverse</h3>
-            <p><strong>Goal:</strong> To develop an efficient, immersive learning platform for industrial maintenance workers, addressing challenges like fault identification and unnecessary disassembly by integrating Virtual Reality (VR) and Machine Learning (ML).</p>
-            <p class="mb-3">
-                This project tackles the difficulties maintenance workers face by creating a training solution within the <b>Industrial Metaverse</b>. A <b>VR environment</b> (built in <b>Unity</b>) provides a realistic, risk-free space to practice assembly/disassembly procedures on complex machinery (e.g., an electric motor). A key component is the integration of an <b>ML model (1D-CNN)</b> trained for specific tasks like <b>bearing fault detection</b> using datasets like CWRU. The ML model's real-time fault predictions and relevant data (e.g., vibration patterns) are visualized directly within the VR interface, guiding the trainee and enhancing understanding. This approach aims to improve learning efficiency, knowledge transfer, and practical problem-solving skills, reducing errors and downtime in real-world maintenance.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Industrial Metaverse</span>
-                <span class="badge bg-secondary me-1 mb-1">Virtual Reality (VR)</span>
-                <span class="badge bg-secondary me-1 mb-1">Machine Learning (ML)</span>
-                <span class="badge bg-secondary me-1 mb-1">1D-CNN</span>
-                <span class="badge bg-secondary me-1 mb-1">Fault Detection</span>
-                <span class="badge bg-secondary me-1 mb-1">Data Visualization (in VR)</span>
-                <span class="badge bg-secondary me-1 mb-1">Unity</span>
-                <span class="badge bg-secondary me-1 mb-1">3D Modeling (CAD)</span>
-                <span class="badge bg-secondary me-1 mb-1">C#</span>
-                <span class="badge bg-secondary me-1 mb-1">Python (TensorFlow)</span>
-                <span class="badge bg-secondary me-1 mb-1">Socket Communication</span>
-            </p>
-        </div>
-        <div class="col-lg-6 order-lg-2"> <img src="./assets/img/Project4.png" class="img-fluid rounded shadow" alt="VR Maintenance Learning Project Image">
-        </div>
-    </div>
-</div>
-
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0"> <h3 class="mb-3 text-primary">LinguaLink: In-House AI Translation Tool</h3>
-            <p><strong>Goal:</strong> To address high costs, vendor dependency, and delays in technical document translation by developing an efficient, customizable in-house AI solution.</p>
-            <p class="mb-3">
-                Developed and fine-tuned "LinguaLink," an AI tool for translating technical documents (e.g., product manuals) based on the <b>Transformer</b> architecture. Utilized the pre-trained <b>Helsinki-NLP/opus-mt-en-fr</b> model and fine-tuned it specifically on internal Atlas Copco Translation Memory (TM) data. The process included data preprocessing, generating embeddings, model training over 20 epochs, and using <b>RegX</b> for stylesheet-compliant output formatting. LinguaLink provides faster, cost-effective, and adaptable translations compared to external vendors and outperformed baseline models like GPT-4o and T5-small in specific evaluations.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Natural Language Processing (NLP)</span>
-                <span class="badge bg-secondary me-1 mb-1">Machine Translation</span>
-                <span class="badge bg-secondary me-1 mb-1">Transformer Models</span>
-                <span class="badge bg-secondary me-1 mb-1">Helsinki-NLP Opus-MT</span>
-                <span class="badge bg-secondary me-1 mb-1">Model Fine-tuning</span>
-                <span class="badge bg-secondary me-1 mb-1">Python</span>
-                <span class="badge bg-secondary me-1 mb-1">BLEU Score Evaluation</span>
-                <span class="badge bg-secondary me-1 mb-1">Regular Expressions (RegX)</span>
-                <span class="badge bg-secondary me-1 mb-1">JSON</span>
-            </p>
-             <p class="mb-0">
-                <strong>Results:</strong> Achieved a <b>BLEU score of 0.7</b>+ (outperforming benchmarks) and a Language Quality Index of 71%, meeting internal requirements while significantly reducing costs and turnaround time.
-             </p>
-        </div>
-        <div class="col-lg-6 order-lg-2">
-             <img src="./assets/img/Project5.png" class="img-fluid rounded shadow" alt="LinguaLink Architecture Diagram">
-             </div>
-    </div>
-</div>
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-             <img src="./assets/img/Picture6.png" class="img-fluid rounded shadow" alt="WISE Sensor to Azure IoT Hub Architecture">
-             </div>
-        <div class="col-lg-6">
-            <h3 class="mb-3 text-primary">Industrial Sensor Data Logging & Analysis (In Progress)</h3>
-            <p><strong>Goal:</strong> To establish a cloud-based pipeline for logging and analyzing data from industrial sensors, enabling real-time monitoring and operational insights.</p>
-            <p class="mb-3">
-                Currently developing a system to connect an <b>Advantech WISE-4250-S232</b> sensor directly to <b>Microsoft Azure IoT Hub</b>. The sensor is configured to act as an <b>MQTT client</b>, securely publishing its data (e.g., humidity, temperature) to the IoT Hub broker. The immediate focus is on establishing robust <b>data logging</b> mechanisms within Azure and performing initial data exploration and visualization using <b>Power BI</b>. Future steps involve setting up automated alerting and potentially leveraging services like Azure Stream Analytics and Time Series Insights for advanced analysis.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Microsoft Azure IoT Hub</span>
-                <span class="badge bg-secondary me-1 mb-1">MQTT Protocol</span>
-                <span class="badge bg-secondary me-1 mb-1">Advantech WISE Sensors</span>
-                <span class="badge bg-secondary me-1 mb-1">Industrial IoT (IIoT)</span>
-                <span class="badge bg-secondary me-1 mb-1">Data Logging</span>
-                <span class="badge bg-secondary me-1 mb-1">Data Visualization</span>
-                <span class="badge bg-secondary me-1 mb-1">Power BI</span>
+      <div class="modal fade" id="aboutMeModal" tabindex="-1" aria-labelledby="aboutMeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="aboutMeModalLabel">About Me</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="lead mb-4">
+                    As an <b>Automation & Digitalization Engineer</b>, I focus on integrating modern technology to enhance manufacturing efficiency. My work involves understanding user requirements, contributing to the design of solution architectures, and participating in related R&D activities. I apply principles in key areas including:
                 </p>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0"> <h3 class="mb-3 text-primary">Shop Floor Operator Performance Analysis (In Progress)</h3>
-            <p><strong>Goal:</strong> To analyze shop floor operator data related to product assembly, aiming to identify operational trends, potential bottlenecks, and areas for efficiency improvement.</p>
-            <p class="mb-3">
-                Currently developing an <b>Azure data pipeline</b> to ingest operator performance data via APIs from shop floor systems, including <b>Azumuta</b> and potentially <b>BPCS (ERP)</b>. The initial phase involves processing and analyzing data from Azumuta (e.g., assembly output, quality metrics, time) using <b>Power BI</b> to create dashboards for visualizing key performance indicators and gaining preliminary operational insights.
-            </p>
-             <p class="mb-3">
-                <i>Future scope includes integrating AI/ML models for predictive analytics and exploring connections to a Digital Twin of the production environment.</i>
-             </p>
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Microsoft Azure (Data Pipeline)</span>
-                <span class="badge bg-secondary me-1 mb-1">Power BI</span>
-                <span class="badge bg-secondary me-1 mb-1">Data Analysis</span>
-                <span class="badge bg-secondary me-1 mb-1">API Integration</span>
-                <span class="badge bg-secondary me-1 mb-1">Shop Floor Systems (Azumuta, BPCS)</span>
-                <span class="badge bg-secondary me-1 mb-1">Operational KPIs</span>
-                <span class="badge bg-light text-dark me-1 mb-1">AI/ML (Future)</span> <span class="badge bg-light text-dark me-1 mb-1">Digital Twin (Future)</span> </p>
-        </div>
-        <div class="col-lg-6 order-lg-2">
-             <img src="https://placehold.co/600x400/4299E1/ffffff?text=Shop+Floor+Data+Pipeline" class="img-fluid rounded shadow" alt="Shop Floor Data Analysis Pipeline">
-             </div>
-    </div>
-</div>
-
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-             <img src="https://placehold.co/600x400/6610f2/ffffff?text=MES+PLC+Communication" class="img-fluid rounded shadow" alt="MES-PLC Communication Architecture">
-             </div>
-        <div class="col-lg-6">
-            <h3 class="mb-3 text-primary">MES-PLC Communication Architecture for AC New MES</h3>
-            <p><strong>Goal:</strong> To design and implement a robust communication architecture enabling seamless data exchange between the .NET-based AC New MES and shop floor PLCs at the Pune PNE Plant.</p>
-            <p class="mb-3">
-                Architected and implemented a solution using <b>Kepware</b> as middleware to bridge the communication gap between the new .NET-based MES and Siemens PLCs. Configured secure data exchange via the <b>OPC UA protocol</b>. Utilized Kepware's <b>Advanced Tags</b> for real-time event triggering (WorkStart/Stop, Andon states) based on PLC data. This system is now <b>successfully implemented and live</b> at the Pune PNE Plant.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">MES Integration (.NET)</span>
-                <span class="badge bg-secondary me-1 mb-1">PLC Communication (Siemens)</span>
-                <span class="badge bg-secondary me-1 mb-1">Kepware</span>
-                <span class="badge bg-secondary me-1 mb-1">OPC UA</span>
-                <span class="badge bg-secondary me-1 mb-1">Industrial Connectivity</span>
-                <span class="badge bg-secondary me-1 mb-1">Event Triggering (Advanced Tags)</span>
-                <span class="badge bg-secondary me-1 mb-1">Shop Floor Automation</span>
-            </p>
-        </div>
-    </div>
-</div>
-
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0"> <h3 class="mb-3 text-primary">Automated O-Ring Detection System (POC)</h3>
-            <p><strong>Goal:</strong> To prevent assembly errors and reduce rework costs by developing an automated system to verify the presence of O-rings on components during manufacturing.</p>
-            <p class="mb-3">
-                Developed a Proof-of-Concept system addressing costly errors caused by missing O-rings. Integrated <b>Computer Vision</b> (fine-tuned <b>YOLO model</b>) with a <b>Siemens S7-315 PLC</b> via <b>Kepware (OPC UA)</b>. The system includes barcode scanning, indicator lamps, event/result logging (pass/fail, operator), and a <b>Flask</b> backend with an HTML/CSS frontend. POC successfully demonstrated feasibility; full implementation under discussion with plant stakeholders.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Computer Vision (YOLO)</span>
-                <span class="badge bg-secondary me-1 mb-1">PLC Programming (Siemens S7)</span>
-                <span class="badge bg-secondary me-1 mb-1">SIMATIC Manager</span>
-                <span class="badge bg-secondary me-1 mb-1">Kepware / OPC UA</span>
-                <span class="badge bg-secondary me-1 mb-1">Flask (Python)</span>
-                <span class="badge bg-secondary me-1 mb-1">HTML/CSS</span>
-                <span class="badge bg-secondary me-1 mb-1">System Integration</span>
-                <span class="badge bg-secondary me-1 mb-1">Data Logging</span>
-                <span class="badge bg-secondary me-1 mb-1">POC Development</span>
-            </p>
-        </div>
-        <div class="col-lg-6 order-lg-2">
-             <img src="https://placehold.co/600x400/ffc107/000000?text=O-Ring+Detection+POC" class="img-fluid rounded shadow" alt="O-Ring Detection System POC">
-             </div>
-    </div>
-</div>
-
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-             <img src="https://placehold.co/600x400/20c997/ffffff?text=Kit+Checker+Vision+System" class="img-fluid rounded shadow" alt="Kit Fill Checker System POC">
-             </div>
-        <div class="col-lg-6">
-            <h3 class="mb-3 text-primary">Automated Kit Fill Checker System (POC)</h3>
-            <p><strong>Goal:</strong> To ensure accuracy in spare parts kitting for Atlas Copco Edwards, preventing errors, reducing rework, and improving traceability using computer vision.</p>
-            <p class="mb-3">
-                Developed a Proof-of-Concept (POC) system to verify correct part numbers and quantities in spare parts kits. Utilized a fine-tuned <b>YOLO model</b> for <b>computer vision</b> detection of components within the camera's view. Integrated <b>barcode scanning</b> for initial identification. The system logs all relevant data (part numbers, scan info, pass/fail, operator details). Implemented a Poka-Yoke feature by generating a unique <b>barcode for correctly filled kits</b>. Also included a manual override option for urgent fills, ensuring operator accountability through logging.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Computer Vision (YOLO)</span>
-                <span class="badge bg-secondary me-1 mb-1">Object Detection</span>
-                <span class="badge bg-secondary me-1 mb-1">Python (likely Flask/OpenCV)</span>
-                <span class="badge bg-secondary me-1 mb-1">Barcode Scanning</span>
-                <span class="badge bg-secondary me-1 mb-1">Barcode Generation</span>
-                <span class="badge bg-secondary me-1 mb-1">Data Logging</span>
-                <span class="badge bg-secondary me-1 mb-1">Poka-Yoke</span>
-                <span class="badge bg-secondary me-1 mb-1">POC Development</span>
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-1">
-            <h3 class="mb-3 text-primary">AI & Vision-Based Robot for Surface Defect Detection</h3>
-            <p><strong>Goal:</strong> To automate the detection of surface defects (cracks, pitting, fretting) on 3D-printed aircraft components using a robotic arm and computer vision, improving inspection consistency over manual methods.</p>
-            <p class="mb-3">
-                Developed a system utilizing a <b>DOBOT Magician</b> robot arm equipped with a camera to systematically scan the surface of a 3D-printed aircraft model (scaled A340 wing). Implemented robot <b>path planning</b> (Lawnmower pattern) and performed <b>camera calibration</b> for accurate imaging. Trained and deployed a <b>YOLOv8 computer vision model</b> on a custom, augmented dataset (using <b>Roboflow</b>) to detect and classify four types of surface defects. This project demonstrated the feasibility of automated NDE for quality control.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Computer Vision (YOLOv8)</span>
-                <span class="badge bg-secondary me-1 mb-1">Object Detection</span>
-                <span class="badge bg-secondary me-1 mb-1">Robotics (DOBOT Magician)</span>
-                <span class="badge bg-secondary me-1 mb-1">Path Planning</span>
-                <span class="badge bg-secondary me-1 mb-1">Camera Calibration</span>
-                <span class="badge bg-secondary me-1 mb-1">Data Augmentation (Roboflow)</span>
-                <span class="badge bg-secondary me-1 mb-1">Non-Destructive Evaluation (NDE)</span>
-                <span class="badge bg-secondary me-1 mb-1">3D Printing</span>
-                <span class="badge bg-secondary me-1 mb-1">Python (OpenCV)</span>
-            </p>
-        </div>
-        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-             <img src="./assets/img/Project6.png" class="img-fluid rounded shadow" alt="AI Defect Detection Robot Project">
-             </div>
-    </div>
-</div>
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-             <img src="https://placehold.co/600x400/0dcaf0/ffffff?text=Ignition+Troubleshooting+Dashboard" class="img-fluid rounded shadow" alt="Ignition SCADA Troubleshooting Dashboard">
-             </div>
-        <div class="col-lg-6">
-            <h3 class="mb-3 text-primary">Ignition SCADA Troubleshooting Dashboard</h3>
-            <p><strong>Goal:</strong> To provide real-time monitoring and faster troubleshooting for event triggers within the MES-PLC communication system.</p>
-            <p class="mb-3">
-                Developed a diagnostic dashboard in <b>Ignition SCADA</b> to monitor event triggers (WorkStart/Stop, Andon, Conveyor) between MES and PLCs. Visualizes relevant <b>PLC tag</b> statuses and displays a log of recent events for operators. Includes <b>event filtering</b> tools for engineers to analyze historical data and diagnose communication issues quickly.
-            </p>
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Ignition SCADA</span>
-                <span class="badge bg-secondary me-1 mb-1">HMI Design</span>
-                <span class="badge bg-secondary me-1 mb-1">PLC Tag Integration</span>
-                <span class="badge bg-secondary me-1 mb-1">OPC UA</span>
-                <span class="badge bg-secondary me-1 mb-1">Real-Time Monitoring</span>
-                <span class="badge bg-secondary me-1 mb-1">Event Logging</span>
-                <span class="badge bg-secondary me-1 mb-1">Troubleshooting Tools</span>
-            </p>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-1">
-            <h3 class="mb-3 text-primary">AI Vision Inspection System for Reworked Vacuum Pumps (In Progress)</h3>
-            <p><strong>Goal:</strong> To automate the quality inspection of washed, reworked vacuum pumps using an AI-powered vision system, ensuring cleanliness standards are met before reassembly.</p>
-            <p class="mb-3">
-                Currently developing an AI-based vision system as part of a larger client project for inspecting reworked vacuum pumps. Configured and deployed the system on an <b>NVIDIA Jetson Xavier</b> platform, including OS setup and necessary configurations. The present focus involves collecting data and <b>training a classification model</b> to accurately identify residual contaminants or cleaning defects. The system architecture is designed to eventually send the inspection result (e.g., pass/fail label) to a <b>PLC</b> via <b>Profinet</b>.
-            </p>
-             <p class="mb-3">
-                <i>Future scope involves integrating this inspection result with a <b>Fanuc robot</b> for automated sorting of pumps onto an Autonomous Mobile Robot (AMR).</i>
-             </p>
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Computer Vision</span>
-                <span class="badge bg-secondary me-1 mb-1">AI/ML (Classification)</span>
-                <span class="badge bg-secondary me-1 mb-1">NVIDIA Jetson Xavier</span>
-                <span class="badge bg-secondary me-1 mb-1">PLC Integration</span>
-                <span class="badge bg-secondary me-1 mb-1">Profinet Communication</span>
-                <span class="badge bg-secondary me-1 mb-1">Industrial Automation</span>
-                <span class="badge bg-secondary me-1 mb-1">Quality Inspection</span>
-                <span class="badge bg-light text-dark me-1 mb-1">Fanuc Robot (Planned)</span> <span class="badge bg-light text-dark me-1 mb-1">AMR (Planned)</span> </p>
-        </div>
-        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-             <img src="https://placehold.co/600x400/2a9d8f/ffffff?text=Pump+Vision+Inspection" class="img-fluid rounded shadow" alt="Rework Pump Vision Inspection System">
-             </div>
-    </div>
-</div>
-
-
-<div class="project-card mb-5 pb-5 border-bottom">
-    <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-             <img src="https://placehold.co/600x400/f56565/ffffff?text=Process+Simulation+VC" class="img-fluid rounded shadow" alt="Process Simulation with Visual Components">
-             </div>
-        <div class="col-lg-6">
-            <h3 class="mb-3 text-primary">Process Simulation & Digital Twin Enablement</h3>
-            <p><strong>Goal:</strong> To leverage simulation and digital twin technologies to optimize shop floor processes, support customer center planning, and enable smart manufacturing initiatives.</p>
-
-            <p class="mb-2">
-                <b>Process Simulation:</b> Developed detailed process simulations using <b>Visual Components</b> for ITBA Customer Centres and global assembly systems. Replicated real-world shop floor conditions with client data to provide insights, such as calculating optimal platform widths for AWM systems based on target process times. Enhanced simulations with custom <b>Python</b> scripts.
-            </p>
-            <p class="mb-3">
-                <b>Digital Twin POCs:</b> Established physical connectivity with <b>PLC systems</b> and delivered Digital Twin Proof of Concepts (POCs) utilizing <b>OPC UA</b> for seamless real-time data integration and visualization.
-            </p>
-            <p class="mb-3">Collaborated cross-functionally to align outputs with operational goals, successfully establishing these technologies as strategic enablers for Smart Manufacturing Solutions across group companies.</p>
-
-            <p class="mb-2">
-                <strong>Key Technologies & Concepts:</strong>
-                <span class="badge bg-secondary me-1 mb-1">Process Simulation</span>
-                <span class="badge bg-secondary me-1 mb-1">Visual Components</span>
-                <span class="badge bg-secondary me-1 mb-1">Digital Twin (POCs)</span>
-                <span class="badge bg-secondary me-1 mb-1">Python Scripting</span>
-                <span class="badge bg-secondary me-1 mb-1">PLC Integration</span>
-                <span class="badge bg-secondary me-1 mb-1">OPC UA</span>
-                <span class="badge bg-secondary me-1 mb-1">Workflow Optimization</span>
-                <span class="badge bg-secondary me-1 mb-1">Smart Manufacturing</span>
-            </p>
-        </div>
-    </div>
-</div>
-        <!-- <div class="project-card mb-5 pb-5 border-bottom">
-            <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABjAAAAJgCAMAAACd6D2bAAAAA1BMVEUAAADa23u0AAAAX0lEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfNkBqgABH2W8fXoAAAAASUVORK5CYII=" class="img-fluid rounded shadow" alt="Robotic Arm Project Image">
+                <div class="mb-4">
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check text-primary" style="color:  white !important;"></i></span>
+                            <b>IT/OT Convergence:</b> Focusing on integrating Information Technology (IT) with Operational Technology (OT) systems.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check text-primary" style="color:  white !important;"></i></span>
+                            <b>AI & Data Analysis:</b> Applying AI concepts and data analysis methods to extract insights and support process optimization.
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check text-primary" style="color:  white !important;"></i></span>
+                            <b>Digital Twin, Simulation & AR/VR:</b> Applying virtual models and AR/VR for enhanced visualization and interaction.
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-6 order-lg-2">
-                    <h3 class="mb-3 text-primary">Intelligent Robotic Arm for Quality Control</h3>
-                    <p class="lead mb-4">Developed a fully autonomous system that uses computer vision to sort objects with high precision. This project showcases my skills in robotics, AI, and sensor integration, creating a reliable and efficient solution for automated quality control in a manufacturing setting.</p>
-                    <p class="mb-2">
-                        <strong>Key Technologies:</strong>
-                        <span class="badge bg-secondary me-2">Python</span>
-                        <span class="badge bg-secondary me-2">Computer Vision</span>
-                        <span class="badge bg-secondary me-2">DOBOT Robotic Arm</span>
-                        <span class="badge bg-secondary">Sensor Integration</span>
-                    </p>
+                <p>Enthusiastic about contributing to smart manufacturing by developing practical, automated solutions for industrial challenges.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="social-icons d-flex flex-wrap justify-content-center align-items-start w-100">
+                    <div class="text-center me-3 mb-3">
+                        <a class="social-icon d-block mx-auto" href="https://www.linkedin.com/in/nirbhay-beri" target="_blank" aria-label="LinkedIn Profile" style="position: relative !important;">
+                            <i class="fab fa-linkedin-in" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+                        </a>
+                        <span class="d-block small text-muted mt-1">LinkedIn</span>
+                    </div>
+                    <div class="text-center me-3 mb-3">
+                        <a class="social-icon d-block mx-auto" href="https://scholar.google.com/citations?user=H8w5wKQAAAAJ&hl=en" target="_blank" aria-label="Google Scholar Profile" style="position: relative !important;">
+                            <i class="fas fa-graduation-cap" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></i>
+                        </a>
+                        <span class="d-block small text-muted mt-1">Google Scholar</span>
+                    </div>
+                    <div class="text-center mb-3">
+                        <a class="social-icon d-block mx-auto" href="https://dm.iisc.ac.in/dm/member/nirbhay-beri/" target="_blank" aria-label="IISc Profile" style="position: relative !important;">
+                            <img src="assets/img/IISc-Final.png" alt="IISc Logo" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 80%; max-height: 80%; width: auto; height: auto;">
+                        </a>
+                        <span class="d-block small text-muted mt-1">IISc Profile</span>
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="project-card mb-5 pb-5 border-bottom">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABjAAAAJgCAMAAACd6D2bAAAAA1BMVEUAAADa23u0AAAAX0lEQVR4nO3BMQEAAADCoPVPbQhfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfNkBqgABH2W8fXoAAAAASUVORK5CYII=" class="img-fluid rounded shadow" alt="SCADA Project Image">
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="mb-3 text-primary">SCADA System for Remote Asset Monitoring</h3>
-                    <p class="lead mb-4">Engineered a robust SCADA system using Ignition to provide a real-time view of machine performance on the shop floor. I integrated multiple industrial protocols (OPC UA, MQTT) to ensure seamless data flow and enabled secure, remote monitoring from a web-based dashboard.</p>
-                    <p class="mb-2">
-                        <strong>Key Technologies:</strong>
-                        <span class="badge bg-secondary me-2">Ignition SCADA</span>
-                        <span class="badge bg-secondary me-2">OPC UA</span>
-                        <span class="badge bg-secondary me-2">MQTT</span>
-                        <span class="badge bg-secondary">Azure IoT Hub</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div> -->
-</section>
-            <hr class="m-0" />
-         <!-- <section class="resume-section" id="interests">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Interests</h2>
-        <p>Beyond automation and Industry 4.0, I enjoy tackling different kinds of complex systems and challenges. Activities like <b>mountain biking</b> and <b>climbing</b> appeal to my interest in strategic planning and precise execution – skills also crucial in engineering. I find a similar blend of creativity and methodical process in experimenting with <b>cooking</b>.</p>
-        <p class="mb-0">My fascination with <b>science fiction</b> and futuristic concepts directly connects with my professional work, offering inspiration for the advanced digital environments and simulations we create using technologies like Digital Twins and VR/AR. This combination of analytical problem-solving, hands-on engagement, and forward-thinking exploration drives my approach both personally and professionally.</p>
     </div>
-</section> -->
-            <hr class="m-0" />
-<section class="resume-section" id="awards">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Awards, Certifications & Training</h2>
-        <ul class="fa-ul mb-0">
-            <li>
-                <span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>
-                <b>Project Management Training</b> - Dale Carnegie
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                <b>Monthly Star Award:</b> Received 'Monthly Star Award' at Atlas Copco (GECIA) for creating a new competency in the team.
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                <b>Fellowship:</b> Received Siemens Technology Research Fellowship (Aug 2022 - July 2024)
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                <b>M.Tech Admissions:</b> Received admission offers from all top 7 IITs and IISc.
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                <b>AIR 26 in GATE 2022</b> (March 2022)
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                <b>Obtained a B.Tech Honors degree</b> as one of only three students in the college (March 2022)
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                <b>Secured First Rank in NPTEL</b> "Industrial Internet of Things 4.0" MOOC Course (April 2021)
-            </li>
-            <li>
-                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                <b>First Prize</b> in <b>Quiz Competition</b> by National Textile Corporation Limited (Oct 2019)
-            </li>
-        </ul>
-    </div>
-</section>          <hr class="m-0" />
-<section class="resume-section" id="Highlights">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Highlights</h2>
-        
-<div class="highlight-item mb-5 pb-5 border-bottom">
-    <h3 class="mb-3 text-primary">Monthly Star Award From General Manager</h3>
-    <p class="mb-4">Received the 'Monthly Star Award' from the General Manager at Atlas Copco (GECIA) for pioneering a new competency within the team. This recognition highlights my commitment to driving innovation and fostering skill development to enhance overall team capabilities.</p>
-    <div class="row gx-2">
-        <div class="col-md-4 mx-auto mb-3">
-            <img src="./assets/img/staraward.jpg" class="img-fluid rounded shadow" alt="Photo of the award being received.">
-            <p class="text-center text-muted mt-2">Receiving The Award From The General Manager.</p>
-        </div>
-    </div>
-</div>
-<div class="highlight-item mb-5 pb-5 border-bottom">
-    <h3 class="mb-3 text-primary">Led Industrial Robotics Workshop (KARMA) @ VIT Pune</h3>
-    <p class="mb-4">
-        Organized and conducted the <b>KARMA (Knowledge Acquisition in Robotics for Manufacturing Automation)</b> workshop for 30 students at Vishwakarma Institute of Technology (VIT), Pune. Created a hands-on lab setup featuring a FANUC R-2000iC/165F robot to demonstrate aspects of the ISA-95 architecture. Provided instruction on robot programming, teach pendant usage, and Delta PLC ISPSoft software.
-    </p>
-    <div class="row gx-2">
-        <div class="col-md-4 mb-3 text-center"> <img src="./assets/img/Workshop4.jpg.png" class="img-fluid rounded shadow" alt="Workshop ISA-95 Architecture Diagram.">
-            <p class="text-muted mt-2">ISA-95 Architecture</p> </div>
-        <div class="col-md-4 mb-3 text-center"> <img src="./assets/img/Workshop2.jpg" class="img-fluid rounded shadow" alt="Robot demonstration area during the workshop.">
-            <p class="text-muted mt-2">Demonstration Area</p> </div>
-        <div class="col-md-4 mb-3 text-center"> <img src="./assets/img/Workshop3.jpg" class="img-fluid rounded shadow" alt="Theoretical knowledge sharing session.">
-            <p class="text-muted mt-2">Knowledge Sharing</p> </div>
-    </div>
-</div>
-
-
-<div class="highlight-item mb-5 pb-5 border-bottom">
-    <h3 class="mb-3 text-primary">Presenting Conference Paper</h3>
-    <p class="mb-4">Successfully presented my research on the Industrial Metaverse at a global conference. This experience was invaluable for sharing my work with experts and receiving feedback on the latest innovations in Industry 4.0 technology.</p>
-    <div class="row gx-2">
-        <div class="col-md-4 mx-auto mb-3">
-            <img src="./assets/img/conference.jpg" class="img-fluid rounded shadow" alt="Photo of Nirbhay presenting the conference paper.">
-            <p class="text-center text-muted mt-2">Presenting the research findings.</p>
-        </div>
-        <!-- <div class="col-md-6 mb-3">
-            <img src="https://placehold.co/600x400/718fa2/ffffff?text=Conference+Photo" class="img-fluid rounded shadow" alt="A photo with colleagues or a professor at the conference.">
-            <p class="text-center text-muted mt-2">A moment from the conference.</p>
-        </div> -->
-    </div>
-</div>
-
-<div class="highlight-item mb-5 pb-5 border-bottom">
-    <h3 class="mb-3 text-primary">Siemens Technology Research Fellowship</h3>
-    <p class="mb-4">Awarded the prestigious Siemens Research Fellowship, which fully funded my M.Tech at IISc. This opportunity allowed me to conduct cutting-edge research on topics like the Industrial Metaverse and AI-driven factory optimization, contributing to the future of Industry 4.0.</p>
-    <div class="row gx-2">
-        <div class="col-md-6 mx-auto mb-3">
-            <img src="./assets/img/Fellowship.jpg" class="img-fluid rounded shadow" alt="Photo of Siemens office or logo.">
-            <p class="text-center text-muted mt-2">Received Fellowship From Siemens Dignitaries</p>
-        </div>
-    </div>
-<!-- </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">Creating A Digital Twin Of A Manufacturing Line</h3>
-            <p class="mb-4">Led the development of a high-fidelity Digital Twin, mirroring a real-world factory production line. This virtual environment was used for performance optimization and predictive maintenance simulations, leading to a 15% increase in efficiency.</p>
-            <div class="row gx-2">
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/805ad5/ffffff?text=Digital+Twin+Render" class="img-fluid rounded shadow" alt="A render of the Digital Twin model.">
-                    <p class="text-center text-muted mt-2">The Digital Twin's 3d Render.</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/9F7AEA/ffffff?text=Data+Visualization+Dashboard" class="img-fluid rounded shadow" alt="Dashboard showing real-time data from the Digital Twin.">
-                    <p class="text-center text-muted mt-2">Real-Time Data Dashboard.</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/B697FF/ffffff?text=Simulation+Results" class="img-fluid rounded shadow" alt="Graph showing the results of a simulation.">
-                    <p class="text-center text-muted mt-2">Simulation Result Analysis.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">Intelligent Robotic Arm For Sorting</h3>
-            <p class="mb-4">Developed a computer vision system for a DOBOT robotic arm to sort objects with high precision. This project showcases my skills in robotics, AI, and sensor integration, creating a fully autonomous system for quality control.</p>
-            <div class="row gx-2">
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/38B2AC/ffffff?text=Robot+Arm+Setup" class="img-fluid rounded shadow" alt="Photo of the DOBOT robot arm setup.">
-                    <p class="text-center text-muted mt-2">The Robot Arm Setup.</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/319795/ffffff?text=Computer+Vision+Interface" class="img-fluid rounded shadow" alt="Screenshot of the computer vision software interface.">
-                    <p class="text-center text-muted mt-2">Custom Vision Interface.</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/2C7A7B/ffffff?text=Action+Photo" class="img-fluid rounded shadow" alt="Close-up of the robot arm in action.">
-                    <p class="text-center text-muted mt-2">The Robot In Action.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">Scada System For Remote Monitoring</h3>
-            <p class="mb-4">Engineered a robust SCADA system using Ignition to provide a real-time view of machine performance. I integrated multiple industrial protocols (OPC UA, MQTT) to ensure seamless data flow from the shop floor to the cloud.</p>
-            <div class="row gx-2">
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/9F7AEA/ffffff?text=SCADA+Dashboard" class="img-fluid rounded shadow" alt="SCADA system dashboard screenshot.">
-                    <p class="text-center text-muted mt-2">The Scada Dashboard.</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/B697FF/ffffff?text=IoT+Hub+Configuration" class="img-fluid rounded shadow" alt="Screenshot of the IoT Hub configuration.">
-                    <p class="text-center text-muted mt-2">Iot Hub Configuration.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">Factory Layout Optimization With Genetic Algorithm</h3>
-            <p class="mb-4">Applied a genetic algorithm to optimize a factory's layout in the Industrial Metaverse. This project demonstrated how AI can solve complex spatial problems to enhance production efficiency and safety, a key part of my Siemens research.</p>
-            <div class="row gx-2">
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/4299E1/ffffff?text=Initial+Layout" class="img-fluid rounded shadow" alt="Initial factory layout.">
-                    <p class="text-center text-muted mt-2">Initial, Unoptimized Layout.</p>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/3182CE/ffffff?text=Optimized+Result" class="img-fluid rounded shadow" alt="Final optimized factory layout.">
-                    <p class="text-center text-muted mt-2">Final Optimized Layout.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">Vr Training Simulation For Industrial Equipment</h3>
-            <p class="mb-4">Developed an immersive VR training module in Unity to teach new employees how to safely operate complex machinery. This reduces training costs and risks by providing a realistic, hands-on experience without a physical machine.</p>
-            <div class="row gx-2">
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/EDF2F7/1A202C?text=VR+Headset+User" class="img-fluid rounded shadow" alt="Person using a VR headset for training.">
-                    <p class="text-center text-muted mt-2">A User In The Vr Training Session.</p>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/E2E8F0/4A5568?text=Unity+Interface+Screenshot" class="img-fluid rounded shadow" alt="Screenshot of the Unity development environment.">
-                    <p class="text-center text-muted mt-2">Unity Development Interface.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">Ai-Based Predictive Maintenance</h3>
-            <p class="mb-4">Created a machine learning model to predict equipment failure based on sensor data. This allowed for proactive maintenance scheduling, minimizing downtime and saving on repair costs. The model was trained using Azure ML services.</p>
-            <div class="row gx-2">
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/2D3748/A0AEC0?text=Predictive+Model+Graph" class="img-fluid rounded shadow" alt="Graph showing the predictive maintenance model's output.">
-                    <p class="text-center text-muted mt-2">Model's Prediction Graph.</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/4A5568/A0AEC0?text=Azure+Dashboard" class="img-fluid rounded shadow" alt="Azure dashboard showing IoT sensor data.">
-                    <p class="text-center text-muted mt-2">Azure Iot Dashboard.</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <img src="https://placehold.co/600x400/718096/A0AEC0?text=Python+Code+Snippet" class="img-fluid rounded shadow" alt="Snippet of Python code for the predictive model.">
-                    <p class="text-center text-muted mt-2">Python Code Snippet.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">Secure Authentication In The Industrial Metaverse</h3>
-            <p class="mb-4">Implemented a robust employee authentication system within a virtual factory environment to ensure secure access to digital assets and operational data. This project was a key component of my research, ensuring data integrity in the metaverse.</p>
-            <div class="row gx-2">
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/1D4ED8/DBEAFE?text=Authentication+Interface" class="img-fluid rounded shadow" alt="Login interface for the virtual factory.">
-                    <p class="text-center text-muted mt-2">The Secure Login Screen.</p>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/1E40AF/DBEAFE?text=Access+Control+Diagram" class="img-fluid rounded shadow" alt="Diagram showing the authentication workflow.">
-                    <p class="text-center text-muted mt-2">Access Control Diagram.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">Sensor Fusion With Gelsight & Leap Motion</h3>
-            <p class="mb-4">Developed a system that combines data from a Gelsight tactile sensor and a Leap Motion controller to provide haptic feedback and high-fidelity interaction in a virtual environment. This project demonstrated expertise in multi-modal Human-Robot Interaction.</p>
-            <div class="row gx-2">
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/4A5568/EDF2F7?text=Gelsight+Sensor" class="img-fluid rounded shadow" alt="A photo of the Gelsight sensor in use.">
-                    <p class="text-center text-muted mt-2">Gelsight Sensor In Action.</p>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/718096/EDF2F7?text=Leap+Motion+Screenshot" class="img-fluid rounded shadow" alt="Screenshot of the Leap Motion interface.">
-                    <p class="text-center text-muted mt-2">Leap Motion Hand Tracking.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">Achieving First Rank In Nptel Iot Mooc</h3>
-            <p class="mb-4">Achieved first rank in the "Industrial Internet of Things 4.0" MOOC course from NPTEL. This accomplishment demonstrates my commitment to continuous learning and staying ahead of the curve in industrial technologies.</p>
-            <div class="row gx-2">
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/083344/F0F9FF?text=NPTEL+Certificate" class="img-fluid rounded shadow" alt="NPTEL course completion certificate.">
-                    <p class="text-center text-muted mt-2">My Nptel Course Certificate.</p>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/0369A1/F0F9FF?text=Course+Content+Preview" class="img-fluid rounded shadow" alt="Screenshot of the course content.">
-                    <p class="text-center text-muted mt-2">A Preview Of The Course Content.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="highlight-item mb-5 pb-5 border-bottom">
-            <h3 class="mb-3 text-primary">National Rank In Gate 2022</h3>
-            <p class="mb-4">Secured an All India Rank of 26 in the highly competitive GATE 2022 examination. This achievement is a testament to my strong foundation in engineering principles and my ability to excel under pressure.</p>
-            <div class="row gx-2">
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/FEE2E2/991B1B?text=GATE+Scorecard" class="img-fluid rounded shadow" alt="Screenshot of the GATE 2022 scorecard.">
-                    <p class="text-center text-muted mt-2">My Official Gate Scorecard.</p>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <img src="https://placehold.co/600x400/FECACA/991B1B?text=Study+Materials" class="img-fluid rounded shadow" alt="Photo of study materials used for GATE.">
-                    <p class="text-center text-muted mt-2">My Study Materials.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-</div> -->
+</div>  
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> -->
+        
         <script src="js/scripts.js"></script>
     </body>
 </html>

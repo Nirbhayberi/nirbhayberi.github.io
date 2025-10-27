@@ -10826,175 +10826,1050 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  padding-top: 3.375rem;
-  color: #6c757d;
-}
 
-@media (min-width: 992px) {
-  body {
-    padding-top: 0;
-    padding-left: 17rem;
-  }
+/*!
+* Start Bootstrap - Nirbhay Beri - Resume v1.0.0 (https://nirbhayberi.github.io)
+* Copyright 2013-2025 Nirbhay Beri
+*/
+
+/* --- BASE STYLES & TYPOGRAPHY --- */
+
+/* This is the new combined body style. It's defined ONLY ONCE. */
+/* --- CONSOLIDATED BODY RULE --- */
+/* --- CONSOLIDATED BODY RULE --- */
+/* --- CONSOLIDATED BODY RULE (WITH PARALLAX) --- */
+body {
+    padding-top: 56px; 
+    color: #ccc; 
+    overflow-x: hidden;
+    cursor: auto; 
+    
+    /* --- PARALLAX BACKGROUND IS NOW ON THE BODY --- */
+    background-color: #032a30; /* Solid dark fallback */
+    /* background-image: url('https://media.istockphoto.com/id/1448246714/vector/abstract-polygonal-space-triangles-with-connecting-dots-and-lines-background-concept-for.jpg?s=612x612&w=0&k=20&c=5Bq5Pt8vHTYo4V82ZLSRGIr3y9sRA5q9KqOniVBomIc='); 
+    background-size: cover; */
+    background-position: center center;
+    background-attachment: fixed; /* This is key: it fixes the background */
+    background-position-y: 0px; /* JS will animate this */
 }
 h1, .h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  text-transform: uppercase;
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    text-transform: uppercase;
+    color: #fff; /* Make all headings white */
 }
 
 h1, .h1 {
-  line-height: 1;
+    line-height: 1;
 }
 
 p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #eee; /* Lighter gray for lead paragraphs */
+}
+
+.text-muted {
+    color: #888 !important; /* Make muted text visible on dark bg */
 }
 
 .subheading {
-  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 1.5rem;
+    font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
-#sideNav {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-#sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: 800;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-}
-#sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+/* --- NEW TOP NAVBAR STYLES --- */
+#topNav {
+    background-color: #054E5A; /* Your primary color */
+    transition: background-color 0.3s ease-in-out;
 }
 
-@media (min-width: 992px) {
-  #sideNav {
-    padding-left: 0;
-    padding-right: 0;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 17rem;
+#topNav.transparent-nav {
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow when transparent */
+}
+
+#topNav .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+#topNav .navbar-nav .nav-link:hover {
+    color: #f8f9fa;
+}
+
+
+/* --- NEW HERO SECTION STYLES --- */
+.hero-section {
     height: 100vh;
-  }
-  #sideNav .navbar-brand {
+    min-height: 700px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     display: flex;
-    margin: auto auto 0;
-    padding: 0.5rem;
-  }
-  #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    background-color: #032a30; /* Dark background */
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 1140px; /* Standard container width */
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.hero-section .hero-title {
+    font-size: calc(2.5rem + 3vw);
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: capitalize !important;
+    opacity: 0; /* Hide for animation */
+    transform: translateY(30px);
+}
+
+.hero-section .hero-subtitle {
+    font-size: calc(1.2rem + 1vw);
+    color: #eee;
+    font-weight: 500;
+    opacity: 0; /* Hide for animation */
+    transform: translateY(30px);
+}
+
+.hero-section .hero-description {
+    font-size: calc(1rem + 0.3vw);
+    color: #ccc;
+    font-weight: 400;
+    max-width: 600px;
+    opacity: 0; /* Hide for animation */
+    transform: translateY(30px);
+}
+
+.hero-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
-  }
-  #sideNav .navbar-collapse {
-    display: flex;
-    align-items: flex-start;
-    flex-grow: 0;
-    width: 100%;
-    margin-bottom: auto;
-  }
-  #sideNav .navbar-collapse .navbar-nav {
-    flex-direction: column;
-    width: 100%;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item {
-    display: block;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    display: block;
-  }
-}
-.social-icons .social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #495057;
-  color: #fff;
-  border-radius: 100%;
-  font-size: 1.5rem;
-  margin-right: 1.5rem;
-}
-.social-icons .social-icon:last-child {
-  margin-right: 0;
-}
-.social-icons .social-icon:hover {
-  background-color:  #054E5A;
+    opacity: 0; /* Hide for animation */
+    transform: scale(0.9);
 }
 
-.dev-icons {
-  font-size: 3rem;
+.hero-button {
+    opacity: 0; /* Hide for animation */
+    transform: translateY(30px);
 }
 
+/* Hero responsive styles */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        height: auto;
+        min-height: auto;
+        text-align: center;
+    }
+    .hero-content {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .hero-image {
+        max-width: 250px;
+        margin-top: 40px;
+    }
+    .hero-description {
+        margin-bottom: 2.5rem !important;
+    }
+}
+
+
+/* --- STANDARD CONTENT SECTION STYLES --- */
 section.resume-section {
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  max-width: 75rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 75rem;
+    margin-left: auto; /* Center resume sections */
+    margin-right: auto; /* Center resume sections */
+    
+    background-color: #032a30; /* Dark background */
+    color: #ccc;
+    border-bottom: 1px solid #1a3c40; /* Subtle separators */
 }
 section.resume-section .resume-section-content {
-  width: 100%;
+    width: 100%;
+}
+
+/* This was the old "details" section, make it a standard section */
+#details {
+    background-color: #032a30;
 }
 
 @media (min-width: 768px) {
-  section.resume-section {
-    min-height: 100vh;
-  }
+    section.resume-section {
+        min-height: 100vh;
+    }
 }
 @media (min-width: 992px) {
-  section.resume-section {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
+    section.resume-section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
 }
-    /* Your existing styles for h1, h2, h3, .subheading */
 
-    .skill-logo {
-        height: 2.25rem; /* Equivalent to fa-2x for Font Awesome */
-        width: auto;
-        vertical-align: middle;
-        /* No margin-right needed now as they are centered in a card */
+/* --- HORIZONTAL PROJECT SECTION --- */
+.projects-container {
+    height: 1600vh; /* 100vh * 16 panels */
+    background-color: #032a30;
+    color: #fff;
+    overflow: hidden;
+}
+
+.projects-sticky-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.projects-track {
+    display: flex;
+    height: 100%;
+    width: 1600%; /* 100% * 16 panels */
+    will-change: transform;
+}
+
+.project-panel {
+    width: calc(100% / 16);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5vw;
+    flex-shrink: 0;
+    background-color: #032a30;
+    border-right: 1px solid #1a3c40;
+}
+
+.project-title-panel {
+    background-color: #054E5A;
+}
+
+.project-panel .panel-content {
+    max-width: 1140px;
+    width: 100%;
+}
+.project-panel h3 {
+    color: #fff;
+    font-size: calc(1.5rem + 1vw);
+}
+.project-panel p {
+    color: #ccc;
+}
+.project-panel .lead {
+    color: #eee;
+    font-weight: 300;
+}
+.project-panel .badge {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+@media (max-width: 991.98px) {
+    .projects-container {
+        height: auto;
+        padding-top: 60px;
     }
-    .skill-card {
-        min-height: 120px; /* Optional: ensures cards have a minimum height for consistency */
-        display: flex;
+    .projects-sticky-wrapper {
+        position: static;
+        height: auto;
+    }
+    .projects-track {
+        display: block;
+        width: 100%;
+    }
+    .project-panel {
+        width: 100%;
+        height: auto;
+        padding: 4rem 1.5rem;
+        border-right: none;
+        border-bottom: 1px solid #1a3c40;
+    }
+    .project-panel .row {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff; /* White background for cards */
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
-    .skill-card:hover {
-        transform: translateY(-5px); /* Lifts the card slightly on hover */
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Stronger shadow on hover */
-    }
-    .skill-card h4 {
-        font-weight: 700; /* Make the skill title bold */
-        font-size: 1.15rem; /* Adjust title size if needed */
-    }
+     .project-panel .row .col-lg-6 {
+        margin-bottom: 2rem;
+     }
+}
+
+/* --- OTHER COMPONENT STYLES --- */
+
+/* Social Icons (used in #details section) */
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #495057;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    margin-right: 1rem; /* Reduced margin slightly */
+    position: relative; /* Needed for absolute centering */
+}
+.social-icons .social-icon:last-child {
+    margin-right: 0;
+}
+.social-icons .social-icon:hover {
+    background-color: #054E5A; /* Use primary color on hover */
+}
+.social-icon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+}
+
+/* --- NEW Skill Card Styles (Dark Mode) --- */
+
+.skill-logo {
+    height: 2.25rem;
+    width: auto;
+    vertical-align: middle;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* New Look */
+    background-color: #043a44; /* A solid, dark, slightly lighter background */
+    border: 1px solid #075a68;   /* A subtle border of your primary color's family */
+    border-radius: 0.5rem;         /* Add rounded corners */
+    padding: 1.5rem 1rem;          /* Add a bit more padding */
+
+    /* New Hover Effect */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Keep the lift effect */
+    border-color: #bd5d38;     /* Change border to your ACCENT color on hover */
+}
+
+.skill-card h4 {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #fff !important; /* Ensure title is white */
+}
+
+.skill-card .small.text-muted {
+    color: #ccc !important; /* Ensure text is light gray */
+}
+
+/* Other component dark mode fixes */
+.fa-ul .fa-li,
+.list-unstyled li {
+    color: #ccc;
+}
+#researchpapers .text-gray-600,
+#researchpapers .text-sm {
+    color: #ccc !important;
+}
+#awards .fa-ul > li {
+    color: #ccc;
+}
+.highlight-item .text-muted {
+     color: #aaa !important;
+}
+
+/* --- CUSTOM CURSOR STYLES --- */
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.cursor-grow .cursor-dot {
+    width: 0;
+    height: 0;
+}
+
+.cursor-grow .cursor-outline {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #fff;
+    opacity: 0.7;
+}
 
 
+/* --- NEW: Dark Mode Modal Styles --- */
+.modal-content {
+    background-color: #0a3a44; /* A slightly lighter dark-mode color */
+    color: #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    justify-content: center; /* Center the social icons */
+}
+
+/* Make the close button white */
+.modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+/* --- NEW: Vertical Timeline Styles --- */
+
+.timeline-container {
+    position: relative;
+    width: 100%;
+    margin-top: 3rem; /* Space below H2 */
+}
+
+/* The central timeline bar */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.1); /* Faint white line */
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    padding-left: 50%;
+    padding-right: 0;
+    margin-bottom: 3rem;
+}
+
+/* The dot on the timeline */
+.timeline-dot {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff; /* White dot */
+    border: 3px solid #054E5A; /* Primary color border */
+    top: 10px; /* Align with top of text */
+    left: 50%;
+    margin-left: -8px;
+    z-index: 1;
+}
+
+/* The content card */
+.timeline-content {
+    position: relative;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.05); /* Same as skill cards */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    width: 90%;
+}
+
+/* Arrow pointer for the card */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* Right-side card setup */
+.timeline-content.right {
+    left: 10%; /* 50% (item) + 10% (content) = 60% from left edge */
+}
+
+/* Right-side arrow */
+.timeline-content.right::before {
+    left: -10px; /* Attach to the left side of the card */
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+}
+
+/* Left-side card setup */
+.timeline-item:nth-child(even) {
+    padding-left: 0;
+    padding-right: 50%;
+}
+.timeline-content.left {
+    float: right; /* Align card to the right */
+    right: 10%; /* 10% from the central line */
+    transform: translateX(-60px); /* Start 60px to the left for animation */
+}
+
+/* Left-side arrow */
+.timeline-content.left::before {
+    right: -10px; /* Attach to the right side of the card */
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.1);
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile Responsive: Stack everything */
+@media (max-width: 991.98px) {
+    .timeline-container::before {
+        left: 8px; /* Move timeline line to the far left */
+        margin-left: 0;
+    }
+    .timeline-item {
+        padding-left: 35px; /* Space for line and dot */
+        padding-right: 0;
+    }
+    .timeline-dot {
+        left: 8px; /* Align dot with line */
+        margin-left: -7px;
+    }
+    .timeline-content.right,
+    .timeline-content.left {
+        width: 100%;
+        left: 0;
+        right: 0;
+        float: none;
+        
+    }
+    .timeline-item:nth-child(even) {
+        padding-right: 0;
+    }
+    /* Point all arrows to the left */
+    .timeline-content.left::before,
+    .timeline-content.right::before {
+        left: -10px;
+        right: auto;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+    }
+}
+
+
+/* --- NEW: Education Card Styles --- */
+
+.education-card {
+    background-color: rgba(255, 255, 255, 0.05); /* Same as skill cards */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.education-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px); /* Same hover lift */
+}
+
+.education-card .subheading {
+    font-size: 1.1rem; /* Slightly smaller subheading for cards */
+}
+
+.education-logo {
+    width: 60px; /* Standard logo size */
+    height: 60px;
+    object-fit: contain; /* Prevent logos from stretching */
+    border-radius: 0.25rem; /* Soften edges */
+    background-color: rgba(255, 255, 255, 0.05); /* Optional: light bg for logos */
+    padding: 5px;
+}
+
+/* --- SECTION BACKGROUND CONTROL (FIXED) --- */
+
+.hero-section,
+section.resume-section,
+#details,
+.projects-container { /* This is the old horizontal scroll container */
+    background-color: transparent; /* This is the key */
+    position: relative; /* This is for z-index layering */
+    z-index: 1;
+}
+/* Make sure the modal background IS solid */
+.modal-content {
+    background-color: #0a3a44; 
+    color: #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative; /* Ensure modal is on top */
+    z-index: 1056; /* Higher than backdrop */
+}
+
+/* Ensure cards "float" on top of the transparent sections */
+.skill-card,
+.timeline-content,
+.project-panel,
+.education-card {
+    background-color: #043a44; /* Solid, slightly lighter dark color */
+    border: 1px solid #075a68;   
+    border-radius: 0.5rem;         
+    padding: 1.5rem 1rem;          
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative; /* Ensure cards are on top */
+    z-index: 3;
+}
+
+/* Keep hover effect */
+.skill-card:hover,
+.education-card:hover {
+    transform: translateY(-5px);
+    border-color: #bd5d38;
+}
+
+/* --- NEW: White Project Carousel Section --- */
+
+.project-section-light {
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text */
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Override text colors inside this section */
+.project-section-light h2,
+.project-section-light h3,
+.project-section-light p,
+.project-section-light .text-dark {
+    color: #333 !important; /* Dark text for headings/paragraphs */
+}
+
+/* Keep the primary color for titles */
+.project-section-light .text-primary {
+    color: #054E5A !important; 
+}
+
+/* Style the text inside the slides */
+.project-section-light .text-muted {
+    color: #555 !important; /* A readable gray for descriptions */
+}
+
+/* Style the badges for the light background */
+.project-section-light .badge {
+    background-color: #e9ecef !important; /* Light gray background */
+    color: #333 !D; /* Dark text */
+    border: 1px solid #dee2e6;
+}
+
+/* Wrapper for padding inside each carousel slide */
+.carousel-content-wrapper {
+    padding: 2rem 5rem; /* Add padding inside the slide */
+}
+
+/* Style the carousel controls (arrows) to be dark */
+#projectCarousel .carousel-control-prev-icon,
+#projectCarousel .carousel-control-next-icon {
+    background-image: none; /* Remove default white SVG */
+    font-family: "Font Awesome 6 Free"; /* Use Font Awesome */
+    font-weight: 900;
+    font-size: 2rem;
+    color: #333; /* Dark color */
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+#projectCarousel .carousel-control-prev-icon:hover,
+#projectCarousel .carousel-control-next-icon:hover {
+    opacity: 0.9;
+}
+
+#projectCarousel .carousel-control-prev-icon::before {
+    content: "\f053"; /* Font Awesome left arrow */
+}
+
+#projectCarousel .carousel-control-next-icon::before {
+    content: "\f054"; /* Font Awesome right arrow */
+}
+
+/* Style the carousel indicators (dots) to be dark */
+#projectCarousel .carousel-indicators [data-bs-target] {
+    background-color: #888; /* Dark dots */
+    opacity: 0.8;
+}
+
+#projectCarousel .carousel-indicators .active {
+    background-color: #054E5A; /* Primary color for active dot */
+}
+
+/* Responsive adjustments for carousel */
+@media (max-width: 991.98px) {
+    .carousel-content-wrapper {
+        padding: 2rem 1rem; /* Less padding on mobile */
+    }
+}
+
+
+
+/* 3. ALL OTHER SECTIONS: TRANSPARENT */
+/* This makes #details, #experience, #skills, #researchpapers, #awards, #Highlights 
+   show the body's parallax background */
+section.resume-section {
+    background-color: transparent; /* TRANSPARENT */
+    border-bottom: 1px solid #1a3c40; 
+}
+#details {
+    background-color: transparent; /* Also make #details transparent */
+}
+
+/* 4. MODAL & CARDS: SOLID */
+/* Make sure modals and cards "float" with solid backgrounds */
+.modal-content {
+    background-color: #0a3a44; 
+    color: #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-card,
+.timeline-content,
+.education-card,
+.highlight-item { /* Add highlight-item here */
+    background-color: #043a44; /* Solid, slightly lighter dark color */
+    border: 1px solid #075a68;   
+    border-radius: 0.5rem;         
+    padding: 1.5rem; /* Standardize padding */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative; 
+    z-index: 2;
+}
+
+.skill-card:hover,
+.education-card:hover,
+.timeline-content:hover {
+    transform: translateY(-5px);
+    border-color: #bd5d38; /* Your accent color */
+}
+
+/* --- Carousel Controls (Dark Background) --- */
+
+/* Style the carousel controls (arrows) to be LIGHT */
+#projectCarousel .carousel-control-prev-icon,
+#projectCarousel .carousel-control-next-icon {
+    background-image: none; /* Remove default dark SVG */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #fff; /* LIGHT color */
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+#projectCarousel .carousel-control-prev-icon:hover,
+#projectCarousel .carousel-control-next-icon:hover {
+    opacity: 1.0;
+}
+
+#projectCarousel .carousel-control-prev-icon::before {
+    content: "\f053"; /* Font Awesome left arrow */
+}
+
+#projectCarousel .carousel-control-next-icon::before {
+    content: "\f054"; /* Font Awesome right arrow */
+}
+
+/* Style the carousel indicators (dots) to be LIGHT */
+#projectCarousel .carousel-indicators [data-bs-target] {
+    background-color: #888; /* Light dots */
+    opacity: 0.8;
+}
+
+#projectCarousel .carousel-indicators .active {
+    background-color: #fff; /* White for active dot */
+}
+
+/* --- NEW: Image Flip Card Styles --- */
+
+/* The 3D container */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    /* Set a consistent aspect ratio, e.g., 16:9 */
+    aspect-ratio: 16 / 9; 
+    perspective: 1000px; /* 3D effect */
+}
+
+/* The inner element that does the flip */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* The hover-state: flip 180 degrees */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and back faces */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* For Safari */
+    backface-visibility: hidden;
     
+    /* Styling for the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem; /* Copied from your "rounded" class */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Copied from your "shadow" class */
+    overflow: hidden; /* Ensure image fits rounded corners */
+}
+
+/* Back face is mirrored */
+.flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #054E5A; /* Your primary color as a fallback */
+    color: white;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the card */
+}
+
+/* Helper text for the back of the card if no image */
+.flip-card-back-text {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* --- SECTION BACKGROUND CONTROL (FIXED) --- */
+
+/* Hero Section: Solid Dark Background (where your profile image is) */
+.hero-section { /* This targets the #about section by its class */
+    background-color: #032a30; /* Your desired SOLID dark color */
+    position: relative; /* Needed for z-index */
+    z-index: 1; /* Ensures it sits on top of body's parallax */
+}
+
+/* Projects Section: Solid White Background (as you requested before) */
+/* If you deleted this, add it back */
+.project-section-light {
+    background-color: #fff; /* SOLID white */
+    color: #333; /* Dark text for readability on white */
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Re-style text/badges for the white project section */
+.project-section-light h2,
+.project-section-light h3,
+.project-section-light p,
+.project-section-light .text-dark {
+    color: #333 !important;
+}
+.project-section-light .text-muted {
+    color: #555 !important;
+}
+.project-section-light .badge {
+    background-color: #e9ecef !important;
+    color: #333 !important;
+    border: 1px solid #dee2e6;
+}
+
+
+/* All other resume sections: Transparent (to show parallax) */
+/* This will apply to #details, #experience, #skills, #researchpapers, #awards, #Highlights */
+section.resume-section:not(.hero-section):not(.project-section-light) {
+    background-color: transparent !important; /* Forces transparency for others */
+}
+
+/* Carousel Controls for Projects (now on white background) */
+/* If you deleted these, add them back, or ensure they are here: */
+#projectCarousel .carousel-control-prev-icon,
+#projectCarousel .carousel-control-next-icon {
+    background-image: none;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #333; /* DARK color for white background */
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+#projectCarousel .carousel-control-prev-icon:hover,
+#projectCarousel .carousel-control-next-icon:hover {
+    opacity: 0.9;
+}
+#projectCarousel .carousel-control-prev-icon::before {
+    content: "\f053";
+}
+#projectCarousel .carousel-control-next-icon::before {
+    content: "\f054";
+}
+#projectCarousel .carousel-indicators [data-bs-target] {
+    background-color: #888;
+    opacity: 0.8;
+}
+#projectCarousel .carousel-indicators .active {
+    background-color: #054E5A; /* Primary color for active dot */
+}
+
+/* Ensure modals/cards still have solid backgrounds */
+.modal-content {
+    background-color: #0a3a44; 
+    color: #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skill-card,
+.timeline-content,
+.education-card,
+.highlight-item { 
+    background-color: #043a44; /* Solid dark color */
+    border: 1px solid #075a68;   
+    border-radius: 0.5rem;         
+    padding: 1.5rem; 
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative; 
+    z-index: 2;
+}
+.skill-card:hover,
+.education-card:hover,
+.timeline-content:hover {
+    transform: translateY(-5px);
+    border-color: #bd5d38; 
+}
+
+
+/* --- NEW: Profile Image Flip Animation (FIXED SIZE) --- */
+
+.flip-profile-container {
+    /* Apply original profile image styles here */
+    max-width: 25rem;  /* Original size */
+    max-height: 25rem; /* Original size */
+    width: 25rem;      /* Force size */
+    height: 25rem;     /* Force size */
+    border: 0.5rem solid rgba(255, 255, 255, 0.2); /* Original border */
+    border-radius: 50%; /* Original shape */
+    
+    /* Keep margin/layout helpers */
+    margin-left: auto;
+    margin-right: auto;
+    
+    perspective: 1000px; 
+    position: relative; 
+    z-index: 10; 
+    background-color: transparent; /* Container is clear */
+}
+
+.flip-profile-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 50%; /* Ensure inner matches outer */
+    overflow: hidden; 
+}
+
+/* Front and Back of the Profile Image Flip */
+.flip-profile-front, .flip-profile-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10%;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Make sure the image inside is just img-fluid, not all the other classes */
+.flip-profile-front img, .flip-profile-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+}
+
+.flip-profile-back {
+    transform: rotateY(180deg); 
+    background-color: #075a68; /* Fallback color for back */
+}
+
+/* Class added by JS for flipping */
+.flip-profile-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+/* --- Text Reveal Animation --- */
+.reveal-text {
+    position: relative;
+    display: inline-block;
+    opacity: 0; /* Start hidden */
+}
+.reveal-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #bd5d38; /* Your accent color */
+    transform: scaleX(0); /* Start as a 0-width bar */
+    transform-origin: left;
+    z-index: 1;
+}
