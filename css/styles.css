@@ -11791,85 +11791,88 @@ section.resume-section:not(.hero-section):not(.project-section-light) {
     border-color: #bd5d38; 
 }
 
-
-/* --- NEW: Profile Image Flip Animation (FIXED SIZE) --- */
-
 .flip-profile-container {
-    /* Apply original profile image styles here */
-    max-width: 25rem;  /* Original size */
-    max-height: 25rem; /* Original size */
-    width: 25rem;      /* Force size */
-    height: 25rem;     /* Force size */
-    border: 0.5rem solid rgba(255, 255, 255, 0.2); /* Original border */
-    border-radius: 50%; /* Original shape */
-    
-    /* Keep margin/layout helpers */
-    margin-left: auto;
-    margin-right: auto;
-    
-    perspective: 1000px; 
-    position: relative; 
-    z-index: 10; 
-    background-color: transparent; /* Container is clear */
+  perspective: 1000px;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
 }
 
 .flip-profile-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    border-radius: 50%; /* Ensure inner matches outer */
-    overflow: hidden; 
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 8s infinite linear;
 }
 
-/* Front and Back of the Profile Image Flip */
-.flip-profile-front, .flip-profile-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 10%;
-    overflow: hidden; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@keyframes spin {
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(180deg); }
+  100% { transform: rotateY(360deg); }
 }
 
-/* Make sure the image inside is just img-fluid, not all the other classes */
-.flip-profile-front img, .flip-profile-back img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: center;
+.flip-profile-front,
+.flip-profile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.flip-profile-front img,
+.flip-profile-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .flip-profile-back {
-    transform: rotateY(180deg); 
-    background-color: #075a68; /* Fallback color for back */
+  transform: rotateY(180deg);
 }
 
-/* Class added by JS for flipping */
-.flip-profile-inner.is-flipped {
-    transform: rotateY(180deg);
+
+.flip-profile-container {
+  perspective: 1000px;
+  width: 220px; /* increased from 160px */
+  height: 220px;
+  margin: 0 auto;
 }
 
-/* --- Text Reveal Animation --- */
-.reveal-text {
-    position: relative;
-    display: inline-block;
-    opacity: 0; /* Start hidden */
+.flip-profile-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinTwice 8s linear forwards; /* runs twice, then stops */
 }
-.reveal-text::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #bd5d38; /* Your accent color */
-    transform: scaleX(0); /* Start as a 0-width bar */
-    transform-origin: left;
-    z-index: 1;
+
+@keyframes spinTwice {
+  0%   { transform: rotateY(0deg); }
+  50%  { transform: rotateY(180deg); }
+  100% { transform: rotateY(720deg); } /* 2 full spins */
+}
+
+.flip-profile-front,
+.flip-profile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* optional visual enhancement */
+}
+
+.flip-profile-front img,
+.flip-profile-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-profile-back {
+  transform: rotateY(180deg);
 }
