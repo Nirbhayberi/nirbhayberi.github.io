@@ -34,7 +34,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: : #054E5A;
+  --bs-primary: #054E5A;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -11875,4 +11875,417 @@ section.resume-section:not(.hero-section):not(.project-section-light) {
 
 .flip-profile-back {
   transform: rotateY(180deg);
+}
+
+
+/* =====================================================
+   PREMIUM UI OVERRIDE - NIRBHAY BERI PORTFOLIO
+   Add this at the END of css/styles.css
+===================================================== */
+
+:root {
+    --nb-primary: #00a6a6;
+    --nb-primary-dark: #054e5a;
+    --nb-dark: #06151c;
+    --nb-dark-2: #0d2530;
+    --nb-light: #f7fbfc;
+    --nb-text: #1d2b31;
+    --nb-muted: #66777f;
+    --nb-gold: #e1b77e;
+}
+
+/* Global background */
+body {
+    background: linear-gradient(180deg, #f8fbfc 0%, #edf6f7 100%) !important;
+    color: var(--nb-text);
+}
+
+/* ================= NAVBAR ================= */
+
+#topNav {
+    background: rgba(5, 78, 90, 0.95) !important;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#topNav .navbar-brand span {
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+#topNav .nav-link {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    opacity: 0.92;
+    position: relative;
+}
+
+#topNav .nav-link:hover {
+    opacity: 1;
+    color: #ffffff !important;
+}
+
+#topNav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0.6rem;
+    right: 0.6rem;
+    bottom: 0.25rem;
+    height: 2px;
+    background: var(--nb-gold);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+#topNav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+#topNav .btn-outline-light {
+    border-radius: 999px;
+    font-weight: 800;
+    padding: 0.45rem 0.95rem;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 15% 25%, rgba(0, 166, 166, 0.35), transparent 28%),
+        radial-gradient(circle at 85% 75%, rgba(225, 183, 126, 0.22), transparent 30%),
+        linear-gradient(135deg, #06151c 0%, #0d2530 45%, #054e5a 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity: 0.75;
+    z-index: 0;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    right: -190px;
+    top: 120px;
+    border-radius: 50%;
+    background: rgba(0, 166, 166, 0.18);
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+}
+
+.hero-title {
+    color: #ffffff !important;
+    font-size: clamp(3.2rem, 7vw, 6.8rem);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    text-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.hero-title .text-primary {
+    color: var(--nb-gold) !important;
+}
+
+.hero-subtitle {
+    color: #d9fbff !important;
+    font-size: clamp(1.35rem, 2.2vw, 2.1rem);
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+.hero-description {
+    color: rgba(255, 255, 255, 0.82) !important;
+    max-width: 720px;
+    font-size: 1.18rem;
+    line-height: 1.7;
+}
+
+.hero-button,
+.btn-primary {
+    border-radius: 999px !important;
+    font-weight: 800;
+    background: linear-gradient(135deg, #e1b77e, #b87a22) !important;
+    border: none !important;
+    color: #06151c !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-button:hover,
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
+    color: #06151c !important;
+}
+
+/* Profile image premium ring */
+.flip-profile-container {
+    width: min(360px, 82vw);
+    height: min(360px, 82vw);
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(255,255,255,0.06));
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.22);
+}
+
+.flip-profile-front img,
+.flip-profile-back img {
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+}
+
+/* ================= SECTIONS ================= */
+
+.resume-section {
+    padding-top: 6.5rem !important;
+    padding-bottom: 6.5rem !important;
+}
+
+.resume-section-content {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.resume-section h2 {
+    color: var(--nb-primary-dark) !important;
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+.resume-section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 72px;
+    height: 5px;
+    border-radius: 99px;
+    background: linear-gradient(90deg, var(--nb-gold), transparent);
+}
+
+/* ================= CARDS ================= */
+
+.skill-card,
+.education-card,
+.timeline-content,
+.project-card {
+    border: 1px solid rgba(5, 78, 90, 0.10) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    color: #1d2b31 !important;
+    backdrop-filter: blur(10px);
+    border-radius: 22px !important;
+    box-shadow: 0 14px 36px rgba(5, 78, 90, 0.08);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.skill-card:hover,
+.education-card:hover,
+.timeline-content:hover,
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 24px 55px rgba(5, 78, 90, 0.16);
+    border-color: rgba(0, 166, 166, 0.32) !important;
+}
+
+.skill-card {
+    min-height: 185px;
+}
+
+.skill-card h4,
+.education-card h3,
+.timeline-content h3,
+.project-card h3 {
+    color: #0e2c35 !important;
+    font-weight: 800;
+}
+
+.skill-card p,
+.timeline-content li,
+.project-card p,
+.education-card p {
+    line-height: 1.6;
+    color: #4c5d64 !important;
+}
+
+/* Timeline */
+.timeline-container::before {
+    background: linear-gradient(180deg, transparent, rgba(0,166,166,0.55), transparent) !important;
+}
+
+.timeline-dot {
+    background-color: var(--nb-gold) !important;
+    border: 3px solid #ffffff !important;
+    box-shadow: 0 0 0 7px rgba(0, 166, 166, 0.14);
+}
+
+.timeline-content {
+    padding: 2rem !important;
+}
+
+.timeline-content::before {
+    display: none;
+}
+
+/* Education */
+.education-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: linear-gradient(180deg, var(--nb-gold), var(--nb-primary-dark));
+}
+
+/* ================= PROJECT PAGE ================= */
+
+body.project-page {
+    background:
+        radial-gradient(circle at 10% 10%, rgba(0,166,166,0.12), transparent 25%),
+        linear-gradient(180deg, #f8fbfc 0%, #ffffff 42%, #eef7f8 100%) !important;
+}
+
+body.project-page #topNav {
+    background: rgba(5, 78, 90, 0.96) !important;
+}
+
+body.project-page .resume-section {
+    padding-top: 8rem !important;
+}
+
+body.project-page .project-card {
+    padding: 2.2rem !important;
+    margin-bottom: 2.5rem !important;
+    border-bottom: none !important;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 18px !important;
+    transition: transform 0.32s ease, box-shadow 0.32s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.025);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.project-card h3 {
+    font-size: 1.65rem;
+    font-weight: 900;
+    letter-spacing: -0.3px;
+}
+
+.badge {
+    border-radius: 999px !important;
+    padding: 0.48rem 0.68rem !important;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+body.project-page .badge,
+.project-card .badge {
+    background-color: #e8f3f4 !important;
+    color: #054e5a !important;
+    border: 1px solid rgba(5, 78, 90, 0.16);
+}
+
+/* ================= IMAGES / HIGHLIGHTS / MODAL ================= */
+
+.highlight-item img,
+#researchpapers img {
+    border-radius: 18px !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+}
+
+.modal-content {
+    border-radius: 24px !important;
+    border: none !important;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #054e5a, #00a6a6) !important;
+    color: white !important;
+}
+
+.modal-body {
+    padding: 2rem !important;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: auto;
+        padding-top: 5rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .resume-section {
+        padding: 4.5rem 1.2rem !important;
+    }
+
+    .timeline-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        transform: none !important;
+    }
+
+    .project-card {
+        padding: 1.35rem !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-button {
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+        letter-spacing: -1px;
+    }
+
+    .resume-section h2 {
+        font-size: 2.3rem;
+    }
 }
