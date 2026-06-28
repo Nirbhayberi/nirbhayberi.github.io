@@ -12289,3 +12289,1550 @@ body.project-page .badge,
         font-size: 2.3rem;
     }
 }
+
+
+/* =====================================================
+   UI UPGRADE 2 - BETTER INNER SECTIONS + TIMELINE FIX
+   Paste at END of css/styles.css
+===================================================== */
+
+/* Overall page section background */
+.container-fluid.p-0 {
+    background:
+        radial-gradient(circle at 8% 18%, rgba(0, 166, 166, 0.08), transparent 26%),
+        radial-gradient(circle at 92% 55%, rgba(225, 183, 126, 0.10), transparent 28%),
+        linear-gradient(180deg, #f7fbfc 0%, #edf6f7 45%, #f9fcfd 100%);
+}
+
+/* Make all sections feel designed, not plain white */
+.resume-section {
+    position: relative;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(5, 78, 90, 0.08) !important;
+}
+
+/* Section content glass panel */
+.resume-section-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Add subtle background pattern to sections */
+.resume-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(5, 78, 90, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(5, 78, 90, 0.025) 1px, transparent 1px);
+    background-size: 38px 38px;
+    pointer-events: none;
+}
+
+/* Better section title */
+.resume-section h2 {
+    margin-bottom: 4.5rem !important;
+    color: #043f49 !important;
+    font-weight: 900 !important;
+    text-shadow: 0 8px 22px rgba(5, 78, 90, 0.08);
+}
+
+/* Remove very harsh white card effect */
+.skill-card,
+.education-card,
+.timeline-content,
+.project-card {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,253,253,0.92)) !important;
+    border: 1px solid rgba(5, 78, 90, 0.12) !important;
+}
+
+/* ================= EXPERIENCE TIMELINE FIX ================= */
+
+/* Make timeline compact and balanced */
+.timeline-container {
+    max-width: 980px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+}
+
+/* Move timeline line to left instead of center */
+.timeline-container::before {
+    left: 28px !important;
+    right: auto !important;
+    width: 3px !important;
+    background: linear-gradient(
+        180deg,
+        transparent,
+        rgba(0, 166, 166, 0.55),
+        rgba(225, 183, 126, 0.65),
+        transparent
+    ) !important;
+}
+
+/* Full-width timeline item */
+.timeline-item {
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    margin-bottom: 3rem !important;
+    padding-left: 78px !important;
+}
+
+/* Timeline dot position */
+.timeline-dot {
+    left: 17px !important;
+    right: auto !important;
+    top: 26px !important;
+    width: 24px !important;
+    height: 24px !important;
+    background: #e1b77e !important;
+    border: 5px solid #ffffff !important;
+    box-shadow:
+        0 0 0 8px rgba(0, 166, 166, 0.12),
+        0 12px 24px rgba(5, 78, 90, 0.18) !important;
+}
+
+/* Force both left/right cards to same clean layout */
+.timeline-content,
+.timeline-content.left,
+.timeline-content.right {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    padding: 2.2rem !important;
+}
+
+/* Remove arrow/triangle from old timeline */
+.timeline-content::before,
+.timeline-content.left::before,
+.timeline-content.right::before {
+    display: none !important;
+}
+
+/* Better timeline typography */
+.timeline-date span {
+    display: inline-block;
+    background: rgba(0, 166, 166, 0.10);
+    color: #007f83 !important;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-content h3 {
+    color: #062f38 !important;
+    font-size: clamp(1.5rem, 2.2vw, 2rem) !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.55rem !important;
+}
+
+.timeline-content .subheading {
+    color: #344d55 !important;
+    font-weight: 800 !important;
+}
+
+.timeline-content ul {
+    margin-top: 1.2rem !important;
+}
+
+.timeline-content li {
+    color: #445960 !important;
+    font-size: 1rem;
+    margin-bottom: 0.55rem !important;
+}
+
+/* Logo in experience card should look clean */
+.timeline-content h3 img {
+    max-height: 38px;
+    object-fit: contain;
+    filter: saturate(1.05);
+}
+
+/* ================= EDUCATION SECTION ================= */
+
+.education-card {
+    min-height: 180px;
+}
+
+.education-card h3 {
+    font-size: 1.45rem !important;
+    line-height: 1.15 !important;
+}
+
+.education-card .subheading {
+    color: #007f83 !important;
+    font-weight: 900 !important;
+}
+
+/* ================= SKILLS SECTION ================= */
+
+.skill-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    right: -55px;
+    bottom: -55px;
+    border-radius: 50%;
+    background: rgba(0, 166, 166, 0.08);
+}
+
+.skill-card i,
+.skill-card .skill-logo {
+    position: relative;
+    z-index: 1;
+}
+
+.skill-card h4,
+.skill-card p {
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= RESEARCH / AWARDS / HIGHLIGHTS ================= */
+
+#researchpapers .resume-section-content,
+#awards .resume-section-content,
+#Highlights .resume-section-content {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(5, 78, 90, 0.08);
+    border-radius: 28px;
+    padding: 3rem;
+    box-shadow: 0 20px 55px rgba(5, 78, 90, 0.08);
+}
+
+#awards ul li {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(5, 78, 90, 0.08);
+    border-radius: 14px;
+    padding: 0.85rem 1rem 0.85rem 2.6rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 8px 22px rgba(5, 78, 90, 0.05);
+}
+
+.highlight-item {
+    background: rgba(255,255,255,0.78);
+    border: 1px solid rgba(5, 78, 90, 0.08);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 14px 36px rgba(5, 78, 90, 0.07);
+}
+
+/* ================= PROJECT PAGE IMPROVEMENT ================= */
+
+body.project-page .project-card {
+    background:
+        linear-gradient(135deg, rgba(255,255,255,0.96), rgba(246,251,252,0.92)) !important;
+    overflow: hidden;
+    position: relative;
+}
+
+body.project-page .project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 6px;
+    background: linear-gradient(180deg, #00a6a6, #e1b77e);
+}
+
+body.project-page .project-card h3 {
+    color: #043f49 !important;
+}
+
+/* ================= FIX WHITE TEXT ISSUE ================= */
+
+/* In case any old white text remains inside light sections */
+.resume-section:not(.hero-section),
+.resume-section:not(.hero-section) p,
+.resume-section:not(.hero-section) li {
+    color: #40555d !important;
+}
+
+.resume-section:not(.hero-section) h1,
+.resume-section:not(.hero-section) h2,
+.resume-section:not(.hero-section) h3,
+.resume-section:not(.hero-section) h4 {
+    color: #043f49 !important;
+}
+
+/* But keep hero text white */
+.hero-section,
+.hero-section p,
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section span {
+    color: inherit;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+    .timeline-container::before {
+        left: 18px !important;
+    }
+
+    .timeline-item {
+        padding-left: 58px !important;
+    }
+
+    .timeline-dot {
+        left: 7px !important;
+    }
+
+    #researchpapers .resume-section-content,
+    #awards .resume-section-content,
+    #Highlights .resume-section-content {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .highlight-item {
+        padding: 1.3rem;
+    }
+}
+/* =====================================================
+   EXPERIENCE V2 - CLEAN CARD LAYOUT
+   Fixes blank timeline card issue
+===================================================== */
+
+.experience-v2-section {
+    background:
+        radial-gradient(circle at 10% 20%, rgba(0, 166, 166, 0.10), transparent 28%),
+        radial-gradient(circle at 90% 80%, rgba(225, 183, 126, 0.12), transparent 30%),
+        linear-gradient(180deg, #f7fbfc 0%, #eef7f8 100%) !important;
+}
+
+.section-heading-wrap {
+    margin-bottom: 2.5rem;
+}
+
+.section-eyebrow {
+    display: inline-block;
+    color: #007f83;
+    background: rgba(0, 166, 166, 0.10);
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.78rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.experience-v2 {
+    display: grid;
+    gap: 2rem;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.experience-card-v2 {
+    position: relative;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(5, 78, 90, 0.12);
+    border-radius: 28px;
+    padding: 2.2rem;
+    box-shadow: 0 22px 55px rgba(5, 78, 90, 0.10);
+    overflow: hidden;
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.experience-card-v2::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 7px;
+    background: linear-gradient(180deg, #00a6a6, #e1b77e);
+}
+
+.experience-card-v2::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -110px;
+    top: -110px;
+    border-radius: 50%;
+    background: rgba(0, 166, 166, 0.08);
+}
+
+.experience-card-v2:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 75px rgba(5, 78, 90, 0.16);
+}
+
+.experience-card-header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.4rem;
+}
+
+.experience-date {
+    display: inline-block;
+    background: rgba(0, 166, 166, 0.10);
+    color: #007f83;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.82rem;
+    margin-bottom: 0.9rem;
+}
+
+.experience-card-v2 h3 {
+    color: #043f49 !important;
+    font-size: clamp(1.45rem, 2.2vw, 2.1rem) !important;
+    line-height: 1.08 !important;
+    font-weight: 900 !important;
+    margin-bottom: 0.55rem !important;
+    text-transform: none !important;
+}
+
+.experience-company {
+    color: #2d4850 !important;
+    font-weight: 800;
+    margin-bottom: 0 !important;
+}
+
+.company-pill {
+    flex-shrink: 0;
+    background: #054e5a;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(5, 78, 90, 0.18);
+}
+
+.siemens-pill {
+    background: #009999;
+}
+
+.experience-impact-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.9rem;
+    margin-bottom: 1.4rem;
+}
+
+.experience-impact-grid div {
+    background: linear-gradient(180deg, #f6fbfc, #eef7f8);
+    border: 1px solid rgba(5, 78, 90, 0.10);
+    border-radius: 18px;
+    padding: 1rem;
+}
+
+.experience-impact-grid strong {
+    display: block;
+    color: #054e5a;
+    font-size: 1.15rem;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.experience-impact-grid span {
+    display: block;
+    color: #60737a;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+.experience-list {
+    position: relative;
+    z-index: 2;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.experience-list li {
+    position: relative;
+    color: #40555d !important;
+    line-height: 1.62;
+    margin-bottom: 0.75rem;
+    padding-left: 1.6rem;
+}
+
+.experience-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #00a6a6;
+    font-weight: 900;
+}
+
+.experience-list b {
+    color: #263f47;
+}
+
+.experience-tags {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.3rem;
+}
+
+.experience-tags span {
+    display: inline-flex;
+    align-items: center;
+    background: #e8f3f4;
+    color: #054e5a;
+    border: 1px solid rgba(5, 78, 90, 0.12);
+    border-radius: 999px;
+    padding: 0.42rem 0.68rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+/* Hide old timeline decorations only inside experience section */
+.experience-v2-section .timeline-container,
+.experience-v2-section .timeline-item,
+.experience-v2-section .timeline-content,
+.experience-v2-section .timeline-dot {
+    all: unset;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .experience-card-v2 {
+        padding: 1.45rem;
+        border-radius: 22px;
+    }
+
+    .experience-card-header {
+        flex-direction: column;
+    }
+
+    .experience-impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-pill {
+        align-self: flex-start;
+    }
+}
+
+/* =====================================================
+   EDUCATION V2 - PREMIUM UI/UX
+===================================================== */
+
+.education-v2-section {
+    background:
+        radial-gradient(circle at 12% 25%, rgba(0, 166, 166, 0.10), transparent 28%),
+        radial-gradient(circle at 85% 75%, rgba(225, 183, 126, 0.12), transparent 30%),
+        linear-gradient(180deg, #f7fbfc 0%, #eef7f8 100%) !important;
+}
+
+.education-v2-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+    margin-bottom: 2.5rem;
+}
+
+.education-v2-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(5, 78, 90, 0.12);
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 0 22px 55px rgba(5, 78, 90, 0.10);
+    overflow: hidden;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.education-v2-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 30px 75px rgba(5, 78, 90, 0.16);
+    border-color: rgba(0, 166, 166, 0.28);
+}
+
+.education-v2-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 7px;
+    background: linear-gradient(180deg, #00a6a6, #e1b77e);
+}
+
+.education-v2-card::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -110px;
+    top: -110px;
+    border-radius: 50%;
+    background: rgba(0, 166, 166, 0.08);
+}
+
+.education-featured {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(240, 250, 251, 0.94)) !important;
+}
+
+.education-card-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.education-logo-wrap {
+    width: 82px;
+    height: 82px;
+    border-radius: 24px;
+    background: #ffffff;
+    border: 1px solid rgba(5, 78, 90, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 28px rgba(5, 78, 90, 0.10);
+    padding: 0.75rem;
+}
+
+.education-logo-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.education-date-pill {
+    background: rgba(0, 166, 166, 0.10);
+    color: #007f83;
+    padding: 0.42rem 0.85rem;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.82rem;
+}
+
+.education-card-body {
+    position: relative;
+    z-index: 2;
+}
+
+.education-card-body h3 {
+    color: #043f49 !important;
+    font-size: clamp(1.6rem, 2.3vw, 2.25rem) !important;
+    line-height: 1.08 !important;
+    font-weight: 900 !important;
+    text-transform: none !important;
+    margin-bottom: 0.35rem !important;
+}
+
+.education-location {
+    color: #60737a !important;
+    font-weight: 700;
+    margin-bottom: 1rem !important;
+}
+
+.education-degree {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #054e5a, #007f83);
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 12px 26px rgba(5, 78, 90, 0.16);
+}
+
+.education-description {
+    color: #40555d !important;
+    line-height: 1.65;
+    margin-bottom: 1.35rem !important;
+}
+
+.education-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+    margin-bottom: 1.3rem;
+}
+
+.education-metrics.two-metrics {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.education-metrics div {
+    background: linear-gradient(180deg, #f6fbfc, #eef7f8);
+    border: 1px solid rgba(5, 78, 90, 0.10);
+    border-radius: 18px;
+    padding: 1rem;
+}
+
+.education-metrics strong {
+    display: block;
+    color: #054e5a;
+    font-size: 1.1rem;
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.education-metrics span {
+    display: block;
+    color: #60737a;
+    font-size: 0.82rem;
+    margin-top: 0.25rem;
+    font-weight: 700;
+}
+
+.education-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.education-tags span {
+    display: inline-flex;
+    align-items: center;
+    background: #e8f3f4;
+    color: #054e5a;
+    border: 1px solid rgba(5, 78, 90, 0.12);
+    border-radius: 999px;
+    padding: 0.42rem 0.68rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+/* Coursework panel */
+.coursework-panel {
+    position: relative;
+    background:
+        linear-gradient(135deg, rgba(5, 78, 90, 0.96), rgba(0, 95, 105, 0.94));
+    border-radius: 30px;
+    padding: 2.2rem;
+    box-shadow: 0 24px 65px rgba(5, 78, 90, 0.18);
+    overflow: hidden;
+}
+
+.coursework-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size: 36px 36px;
+}
+
+.coursework-panel::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    right: -120px;
+    top: -120px;
+    border-radius: 50%;
+    background: rgba(225, 183, 126, 0.15);
+}
+
+.coursework-header {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1.4rem;
+}
+
+.coursework-header .section-eyebrow {
+    background: rgba(225, 183, 126, 0.16);
+    color: #f6d49b;
+}
+
+.coursework-header h3 {
+    color: #ffffff !important;
+    font-size: clamp(1.5rem, 2.2vw, 2.1rem) !important;
+    line-height: 1.15;
+    text-transform: none !important;
+    max-width: 780px;
+}
+
+.coursework-grid {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.coursework-grid span {
+    display: inline-flex;
+    align-items: center;
+    color: #e9ffff;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    padding: 0.6rem 0.9rem;
+    font-weight: 800;
+    font-size: 0.9rem;
+    backdrop-filter: blur(8px);
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+    .education-v2-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    .education-v2-card,
+    .coursework-panel {
+        padding: 1.4rem;
+        border-radius: 22px;
+    }
+
+    .education-card-top {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .education-metrics,
+    .education-metrics.two-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .education-logo-wrap {
+        width: 72px;
+        height: 72px;
+        border-radius: 20px;
+    }
+}
+
+/* =====================================================
+   EDUCATION V3 - PREMIUM UI/UX
+===================================================== */
+
+.education-v3-section {
+    background:
+        radial-gradient(circle at 12% 25%, rgba(0, 166, 166, 0.10), transparent 28%),
+        radial-gradient(circle at 88% 75%, rgba(225, 183, 126, 0.12), transparent 30%),
+        linear-gradient(180deg, #f7fbfc 0%, #eef7f8 100%) !important;
+}
+
+.education-v3-main-grid {
+    display: grid;
+    grid-template-columns: 1.18fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.education-v3-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(5, 78, 90, 0.12);
+    border-radius: 30px;
+    padding: 2rem;
+    box-shadow: 0 22px 55px rgba(5, 78, 90, 0.10);
+    overflow: hidden;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.education-v3-card:hover,
+.education-v3-school-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 30px 75px rgba(5, 78, 90, 0.16);
+    border-color: rgba(0, 166, 166, 0.28);
+}
+
+.education-v3-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 7px;
+    background: linear-gradient(180deg, #00a6a6, #e1b77e);
+}
+
+.education-v3-card::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: -120px;
+    top: -120px;
+    border-radius: 50%;
+    background: rgba(0, 166, 166, 0.08);
+}
+
+.education-v3-featured {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(240, 250, 251, 0.94)) !important;
+}
+
+.education-v3-top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.education-v3-logo-box {
+    width: 84px;
+    height: 84px;
+    border-radius: 24px;
+    background: #ffffff;
+    border: 1px solid rgba(5, 78, 90, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    box-shadow: 0 12px 28px rgba(5, 78, 90, 0.10);
+}
+
+.education-v3-logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.education-v3-date {
+    background: rgba(0, 166, 166, 0.10);
+    color: #007f83;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+
+.education-v3-body {
+    position: relative;
+    z-index: 2;
+}
+
+.education-v3-body h3 {
+    color: #043f49 !important;
+    font-size: clamp(1.55rem, 2.3vw, 2.25rem) !important;
+    line-height: 1.08 !important;
+    font-weight: 900 !important;
+    text-transform: none !important;
+    margin-bottom: 0.35rem !important;
+}
+
+.education-v3-location {
+    color: #60737a !important;
+    font-weight: 700;
+    margin-bottom: 1rem !important;
+}
+
+.education-v3-degree {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #054e5a, #007f83);
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 12px 26px rgba(5, 78, 90, 0.16);
+}
+
+.education-v3-desc {
+    color: #40555d !important;
+    line-height: 1.65;
+    margin-bottom: 1.35rem !important;
+}
+
+.education-v3-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+    margin-bottom: 1.3rem;
+}
+
+.education-v3-two-metrics {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.education-v3-metrics div {
+    background: linear-gradient(180deg, #f6fbfc, #eef7f8);
+    border: 1px solid rgba(5, 78, 90, 0.10);
+    border-radius: 18px;
+    padding: 1rem;
+}
+
+.education-v3-metrics strong {
+    display: block;
+    color: #054e5a;
+    font-size: 1.1rem;
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.education-v3-metrics span {
+    display: block;
+    color: #60737a;
+    font-size: 0.82rem;
+    margin-top: 0.25rem;
+    font-weight: 700;
+}
+
+.education-v3-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.education-v3-tags span {
+    display: inline-flex;
+    align-items: center;
+    background: #e8f3f4;
+    color: #054e5a;
+    border: 1px solid rgba(5, 78, 90, 0.12);
+    border-radius: 999px;
+    padding: 0.42rem 0.68rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+/* School cards */
+.education-v3-school-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+.education-v3-school-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(5, 78, 90, 0.10);
+    border-radius: 24px;
+    padding: 1.4rem;
+    box-shadow: 0 14px 36px rgba(5, 78, 90, 0.08);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.education-v3-school-icon {
+    width: 66px;
+    height: 66px;
+    flex: 0 0 66px;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid rgba(5, 78, 90, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem;
+    box-shadow: 0 10px 24px rgba(5, 78, 90, 0.08);
+}
+
+.education-v3-school-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.education-v3-school-card span {
+    display: inline-block;
+    color: #007f83;
+    background: rgba(0, 166, 166, 0.10);
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    font-weight: 900;
+    font-size: 0.78rem;
+    margin-bottom: 0.55rem;
+}
+
+.education-v3-school-card h4 {
+    color: #043f49 !important;
+    font-size: 1.25rem !important;
+    font-weight: 900 !important;
+    text-transform: none !important;
+    margin-bottom: 0.2rem !important;
+}
+
+.education-v3-school-card p {
+    color: #60737a !important;
+    margin-bottom: 0.25rem !important;
+    font-weight: 700;
+}
+
+.education-v3-school-card strong {
+    color: #054e5a;
+    font-weight: 900;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+    .education-v3-main-grid,
+    .education-v3-school-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    .education-v3-card {
+        padding: 1.4rem;
+        border-radius: 22px;
+    }
+
+    .education-v3-top {
+        flex-direction: column;
+    }
+
+    .education-v3-metrics,
+    .education-v3-two-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .education-v3-school-card {
+        align-items: flex-start;
+        padding: 1.2rem;
+    }
+
+    .education-v3-logo-box {
+        width: 74px;
+        height: 74px;
+        border-radius: 20px;
+    }
+}
+/* =====================================================
+   SKILLS V2 - PREMIUM TECH DASHBOARD
+===================================================== */
+
+.skills-v2-section {
+    background:
+        radial-gradient(circle at 12% 20%, rgba(0, 166, 166, 0.12), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(225, 183, 126, 0.13), transparent 30%),
+        linear-gradient(180deg, #f7fbfc 0%, #edf7f8 100%) !important;
+}
+
+/* Top skill summary panel */
+.skills-hero-panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.45fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background:
+        linear-gradient(135deg, rgba(5, 78, 90, 0.98), rgba(0, 92, 104, 0.95));
+    border-radius: 32px;
+    padding: 2.6rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 28px 75px rgba(5, 78, 90, 0.22);
+    overflow: hidden;
+}
+
+.skills-hero-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size: 38px 38px;
+}
+
+.skills-hero-panel::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: -130px;
+    top: -130px;
+    border-radius: 50%;
+    background: rgba(225, 183, 126, 0.18);
+}
+
+.skills-hero-panel > * {
+    position: relative;
+    z-index: 2;
+}
+
+.skills-hero-panel h3 {
+    color: #ffffff !important;
+    font-size: clamp(1.9rem, 3vw, 3rem) !important;
+    line-height: 1.08 !important;
+    font-weight: 900 !important;
+    text-transform: none !important;
+    margin-bottom: 1rem !important;
+}
+
+.skills-hero-panel p {
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 1.06rem;
+    line-height: 1.75;
+    max-width: 760px;
+}
+
+.skills-hero-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+}
+
+.skills-hero-stats div {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    padding: 1rem 1.1rem;
+    backdrop-filter: blur(10px);
+}
+
+.skills-hero-stats strong {
+    display: block;
+    color: #f3c987;
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.skills-hero-stats span {
+    display: block;
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: 700;
+    margin-top: 0.2rem;
+}
+
+/* Skill grid */
+.skills-v2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.35rem;
+    margin-bottom: 2rem;
+}
+
+.skill-v2-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(5, 78, 90, 0.12);
+    border-radius: 28px;
+    padding: 1.65rem;
+    min-height: 335px;
+    box-shadow: 0 18px 45px rgba(5, 78, 90, 0.09);
+    overflow: hidden;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.skill-v2-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 75px rgba(5, 78, 90, 0.16);
+    border-color: rgba(0, 166, 166, 0.30);
+}
+
+.skill-v2-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 5px;
+    background: linear-gradient(90deg, #00a6a6, #e1b77e);
+}
+
+.skill-v2-card::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: -80px;
+    top: -80px;
+    border-radius: 50%;
+    background: rgba(0, 166, 166, 0.08);
+}
+
+.featured-skill {
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(238, 249, 250, 0.95)) !important;
+}
+
+.skill-v2-icon {
+    position: relative;
+    z-index: 2;
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #054e5a, #008a91);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.45rem;
+    box-shadow: 0 12px 26px rgba(5, 78, 90, 0.18);
+    margin-bottom: 1.1rem;
+}
+
+.skill-v2-card h3 {
+    position: relative;
+    z-index: 2;
+    color: #043f49 !important;
+    font-size: 1.45rem !important;
+    line-height: 1.13 !important;
+    font-weight: 900 !important;
+    text-transform: none !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.skill-v2-card p {
+    position: relative;
+    z-index: 2;
+    color: #40555d !important;
+    line-height: 1.62;
+    margin-bottom: 1.1rem !important;
+}
+
+.skill-tags {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.skill-tags span {
+    display: inline-flex;
+    align-items: center;
+    background: #e8f3f4;
+    color: #054e5a;
+    border: 1px solid rgba(5, 78, 90, 0.12);
+    border-radius: 999px;
+    padding: 0.36rem 0.62rem;
+    font-size: 0.74rem;
+    font-weight: 800;
+}
+
+/* Methodology panel */
+.skills-method-panel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.skills-method-panel > div {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(5, 78, 90, 0.10);
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: 0 14px 36px rgba(5, 78, 90, 0.08);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.skills-method-panel > div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(5, 78, 90, 0.14);
+}
+
+.skills-method-panel i {
+    color: #00a6a6;
+    font-size: 1.65rem;
+    margin-bottom: 0.9rem;
+}
+
+.skills-method-panel h4 {
+    color: #043f49 !important;
+    font-size: 1.18rem !important;
+    font-weight: 900 !important;
+    text-transform: none !important;
+}
+
+.skills-method-panel p {
+    color: #60737a !important;
+    line-height: 1.55;
+    margin-bottom: 0 !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 1199px) {
+    .skills-v2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .skills-hero-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-method-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .skills-v2-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-hero-panel {
+        padding: 1.6rem;
+        border-radius: 24px;
+    }
+
+    .skill-v2-card {
+        min-height: auto;
+    }
+}
+
+
+/* =====================================================
+   GLOBAL LAYOUT WIDTH FIX
+   Makes site use more screen width and reduces empty sides
+===================================================== */
+
+/* Better anchor scroll under fixed navbar */
+html {
+    scroll-padding-top: 90px;
+}
+
+/* Make every section use full page background */
+.resume-section {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    scroll-margin-top: 90px;
+}
+
+/* Main fix: increase content width */
+.resume-section-content {
+    width: min(90vw, 1420px) !important;
+    max-width: 1420px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* For very large screens, use more area but still keep readable */
+@media (min-width: 1600px) {
+    .resume-section-content {
+        width: min(88vw, 1500px) !important;
+        max-width: 1500px !important;
+    }
+}
+
+/* For laptop screens */
+@media (max-width: 1199px) {
+    .resume-section-content {
+        width: min(94vw, 1120px) !important;
+    }
+}
+
+/* For mobile */
+@media (max-width: 768px) {
+    .resume-section-content {
+        width: 92vw !important;
+    }
+}
+
+/* Remove narrow internal max-width restrictions */
+.experience-v2,
+.education-v3-main-grid,
+.education-v3-school-grid,
+.skills-hero-panel,
+.skills-v2-grid,
+.skills-method-panel {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* Experience cards should use wider area */
+.experience-card-v2 {
+    width: 100% !important;
+}
+
+/* Education should breathe more */
+.education-v3-main-grid {
+    grid-template-columns: 1.15fr 1fr !important;
+    gap: 2.2rem !important;
+}
+
+/* Skills should look like a wide dashboard */
+.skills-v2-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.6rem !important;
+}
+
+.skills-hero-panel {
+    width: 100% !important;
+}
+
+/* Research / Awards / Highlights panels should not stay narrow */
+#researchpapers .resume-section-content,
+#awards .resume-section-content,
+#Highlights .resume-section-content {
+    width: min(90vw, 1420px) !important;
+    max-width: 1420px !important;
+}
+
+/* If previous CSS created a narrow white panel, make it wider and cleaner */
+#researchpapers .resume-section-content,
+#awards .resume-section-content,
+#Highlights .resume-section-content {
+    border-radius: 30px;
+}
+
+/* Better heading spacing after navbar */
+.section-heading-wrap,
+.resume-section > .resume-section-content > h2 {
+    padding-top: 0.5rem;
+}
+
+/* Fix heading getting hidden behind fixed navbar when clicking nav */
+#experience,
+#education,
+#skills,
+#researchpapers,
+#projects,
+#awards,
+#Highlights {
+    scroll-margin-top: 95px;
+}
+
+/* Better full background so left/right area doesn't look empty */
+body,
+.container-fluid.p-0 {
+    background:
+        radial-gradient(circle at 8% 20%, rgba(0, 166, 166, 0.10), transparent 30%),
+        radial-gradient(circle at 92% 70%, rgba(225, 183, 126, 0.12), transparent 32%),
+        linear-gradient(180deg, #f7fbfc 0%, #eef7f8 45%, #f8fcfd 100%) !important;
+}
+
+/* Keep section pattern full width */
+.resume-section::before {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+}
+
+/* Better responsiveness */
+@media (max-width: 1199px) {
+    .skills-v2-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .education-v3-main-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .skills-v2-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
